@@ -1,0 +1,17 @@
+@-webkit-keyframes flipOutY {
+  from { -webkit-transform: perspective(400px); }
+  30% { -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg); opacity: 1; }
+  100% { -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg); opacity: 0; }
+}
+@keyframes flipOutY {
+  from { transform: perspective(400px); }
+  30% { transform: perspective(400px) rotate3d(0, 1, 0, -15deg); opacity: 1; }
+  100% { transform: perspective(400px) rotate3d(0, 1, 0, 90deg); opacity: 0; }
+}
+
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+}

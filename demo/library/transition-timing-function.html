@@ -1,0 +1,152 @@
+<div id="loadHtml">
+    <div class="mod_detail">
+        <div class="column">
+            <h1>transition-timing-function</h1>
+        </div>
+        <!--语法 star-->
+        <div class="mod_article">
+            <div class="column">
+                <div class="intro">
+                    <p>transition-timing-function用来定义过渡动画的效果。</p>
+                </div>
+                <h2>语法</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_css">
+                            <strong>transition-timing-function:</strong> linear | <span class="default">ease</span> | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)[ ,linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;) ]* ;设置动画执行的方式（缓动效果）。
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="20%">语法项目</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>初始值</td>
+                                <td>ease</td>
+                            </tr>
+                            <tr>
+                                <td>适用于</td>
+                                <td>所有元素</td>
+                            </tr>
+                            <tr>
+                                <td>可否继承</td>
+                                <td>否</td>
+                            </tr>
+                            <!--<tr>
+                                <td>单位</td>
+                                <td>S</td>
+                            </tr>-->
+                            <tr>
+                                <td>媒介</td>
+                                <td>视觉</td>
+                            </tr>
+                            <tr>
+                                <td>版本</td>
+                                <td>CSS3.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--语法 end-->
+        <!--说明 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>说明</h2>
+                <div class="intro" style=" overflow:hidden;">
+                    <p><strong>transition-timing-function</strong>可以设置动画的过渡效果，默认值ease。</p></div>
+            </div>
+        </div>
+        <!--说明 end-->
+        <!--取值 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>取值</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_value">
+                            <p>ease：缓解效果，等同于cubic-bezier(0.25,0.1,0.25,1.0)函数，既立方贝塞尔。</p>
+                            <p>linear：线性效果，等同于cubic-bezier(0.0,0.0,1.0,1.0)函数。</p>
+                            <p>ease-in：渐显效果，等同于cubic-bezier(0.42,0,1.0,1.0)函数。</p>
+                            <p>ease-out：渐隐效果，等同于cubic-bezier(0,0,0.58,1.0)函数。</p>
+                            <p>ease-in-out：渐显渐隐效果，等同于cubic-bezier(0.42,0,0.58,1.0)函数。</p>
+                            <p>cubic-bezier：特殊的立方贝塞尔曲线效果。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--取值 end-->
+        
+        <!--实例代码 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>实例代码</h2>
+                <div class="code">
+                    <div class="code_inner">
+                        <span class="mod_tag">CSS</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_css"></div></span>
+                        <textarea id="css_code" class="code_textarea">                        </textarea>
+                        <pre class="language-css prettyprint highlight lang-css linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="pun">.</span><span class="pln">demo_box</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">all </span><span class="lit">2s</span><span class="pln"> </span><span class="lit">0.5s</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">all </span><span class="lit">2s</span><span class="pln"> </span><span class="lit">0.5s</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">relative</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; &nbsp; border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; &nbsp; margin</span><span class="pun">:</span><span class="lit">10px</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; overflow</span><span class="pun">:</span><span class="pln">hidden</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">.</span><span class="pln">ease</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">.</span><span class="pln">linear</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">linear</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">linear</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">.</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">.</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">.</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">.</span><span class="pln">cubic</span><span class="pun">-</span><span class="pln">bezier</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">cubic</span><span class="pun">-</span><span class="pln">bezier</span><span class="pun">(</span><span class="lit">0.52</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0.58</span><span class="pun">,</span><span class="lit">1.0</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">timing</span><span class="pun">-</span><span class="kwd">function</span><span class="pun">:</span><span class="pln">cubic</span><span class="pun">-</span><span class="pln">bezier</span><span class="pun">(</span><span class="lit">0.52</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0.58</span><span class="pun">,</span><span class="lit">1.0</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">.</span><span class="pln">run</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></li></ol></pre>
+                    </div>
+                    <div class="code_inner">
+                        <span class="mod_tag">HTML</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_html"></div></span>
+                        <textarea id="html_code" class="code_textarea">                        </textarea>
+                        <pre class="language-html prettyprint highlight lang-html linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box ease"</span><span class="tag">&gt;</span><span class="pln">ease</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box linear"</span><span class="tag">&gt;</span><span class="pln">linear</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box ease-in"</span><span class="tag">&gt;</span><span class="pln">ease-in</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box ease-out"</span><span class="tag">&gt;</span><span class="pln">ease-out</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box ease-in-out"</span><span class="tag">&gt;</span><span class="pln">ease-in-out</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box cubic-bezier"</span><span class="tag">&gt;</span><span class="pln">cubic-bezier(0.52,0,0.58,1.0)</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"run"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"运行"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">margin</span><span class="pun">:</span><span class="lit">10px</span><span class="pln"> </span><span class="lit">10px</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="tag">&lt;script&gt;</span><span class="pln"></span><br></li><li class="L8"><span class="pln">$</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">"#run"</span><span class="pun">).</span><span class="pln">toggle</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">".demo_box"</span><span class="pun">).</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">"run"</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="str">"返回"</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">},</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="str">".demo_box"</span><span class="pun">).</span><span class="pln">removeClass</span><span class="pun">(</span><span class="str">"run"</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">val</span><span class="pun">(</span><span class="str">"运行"</span><span class="pun">);</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"></span><br></li><li class="L6"><span class="pln"></span><span class="pun">});</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="tag">&lt;/script&gt;</span><span class="pln"></span><br></li></ol></pre>
+                    </div>
+                    <a href="#" id="run_demo" class="btn_run">运行</a>
+                    <a href="#" id="run_demo_new" class="btn_run">新窗口运行</a>
+                    
+                </div>
+            </div>
+        </div>
+        <!--实例代码 end-->
+        <!--兼容性 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>兼容性</h2>
+                <div class="mod_table">
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th class="ie" width="20%">IE</th>
+                                <th class="firefox" width="20%">Firefox</th>
+                                <th class="opera" width="20%">Opera</th>
+                                <th class="safari" width="20%">Safari</th>
+                                <th class="chrome" width="20%">Chrome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IE 10+</td>
+                                <td>Firefox 3.5+</td>
+                                <td>Opera 11.50+</td>
+                                <td>Safari 10+</td>
+                                <td>Chrome 2.0+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--兼容性 end-->
+        <!--<div id="js_gui_suc" class="gui_success hidden">复制代码成功!</div>-->
+        <div id="js_gui_suc" class="pop_dialog hidden" style="display:;margin:-100px 0 0 -120px;width:240px;">
+            <div class="inner">
+                <!--小浮层-->
+                <div class="small">
+                    <i class="icon_success"></i>
+                    <h4>代码复制成功</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

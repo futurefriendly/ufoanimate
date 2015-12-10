@@ -1,0 +1,902 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS Animate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=0.6, minimum-scale=0.6, maximum-scale=0.6, user-scalable=no" />
+<link type="image/x-icon" href="http://www.xiaojukeji.com/website/images/favicon.ico" rel="icon" />
+<link rel="stylesheet" type="text/css" href="../animate.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="http://static.xiaojukeji.com/pinche/js/queryloader2.min.js"></script>
+<script type="text/javascript">
+
+document.ontouchmove = function(e) { e.preventDefault(); }
+
+document.createElement('header');
+document.createElement('footer');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+
+// loading
+    
+window.addEventListener('DOMContentLoaded', function() {
+
+    new QueryLoader2(document.querySelector("body"), {
+        barColor: "#ff8903",
+        backgroundColor: "#111",
+        percentage: true,
+        barHeight: 3,
+        minimumTime: 0,
+        maxTime:1000000,
+        fadeOutTime: 300,
+        onComplete : function(){
+        	txtAlert('<span class="icon-checkmark"></span> 加载成功！支持将图片拖拽到画布区域预览');
+        }
+    });
+});
+</script>
+<body ontouchstart="">
+<div class="topnav">
+	<div class="bd clear">
+		<div class="logo clear">
+			<div tabindex="0" class="c1">
+				<a tabindex="-1" href="javascript:;" title="CSS Animation"></a>
+			</div>
+			<div class="dis_b left ml5 tx_24 tx_ar c_tw">CSS Animate</div>
+		</div>
+		<div class="nav clear">
+
+			<div class="item select" rel="标准轨迹">
+				<a tabindex="0" href="javascript:;" data-role="1" class="txt">标准轨迹(Animate.css)</a>
+			</div>
+
+			<div class="item" rel="规范_文件组织">
+				<a tabindex="0" href="javascript:;" data-role="2" class="txt">自定义轨迹</a>
+				<div class="topNavSub" style="display:none">
+					<b class="a a5 a_b"><u></u></b>
+					<ul class="clear">
+						<li><a href="#test">标准轨迹</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="item" rel="CSS手册">
+				<a tabindex="0" href="javascript:;" data-role="3" class="txt">CSS手册</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="topnav_ph"></div>
+
+<div class="container">
+	<aside id="animatecss">
+		<div class="aniCate" id="aniCate1">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">引起注意</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item select"><a tab-index="0" href="#" class="lk" title="bounce"><span class="t">弹跳</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flash"><span class="t">闪烁</span></a></li>
+					<li class="item"><a href="#" class="lk" title="jello"><span class="t">果冻</span></a></li>
+					<li class="item"><a href="#" class="lk" title="pulse"><span class="t">脉冲</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rubberBand"><span class="t">橡皮</span></a></li>
+					<li class="item"><a href="#" class="lk" title="shake"><span class="t">抖动</span></a></li>
+					<li class="item"><a href="#" class="lk" title="swing"><span class="t">钟摆</span></a></li>
+					<li class="item"><a href="#" class="lk" title="tada"><span class="t">秋千</span></a></li>
+					<li class="item"><a href="#" class="lk" title="wobble"><span class="t">摇晃</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">弹跳进入</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="bounceIn"><span class="t">弹跳进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInDown"><span class="t">弹跳向下进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInLeft"><span class="t">弹跳向右进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInRight"><span class="t">弹跳向左进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInUp"><span class="t">弹跳向上进入</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">弹跳退出</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="bounceOut"><span class="t">弹跳退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutDown"><span class="t">弹跳向下退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutLeft"><span class="t">弹跳向左退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutRight"><span class="t">弹跳向右退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutUp"><span class="t">弹跳向上退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">淡入</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="fadeIn"><span class="t">淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInDown"><span class="t">向下淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInDownBig"><span class="t">加强版向下淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInLeft"><span class="t">向右淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInLeftBig"><span class="t">加强版向右淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInRight"><span class="t">向左淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInRightBig"><span class="t">加强版向左淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInUp"><span class="t">向上淡入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInUpBig"><span class="t">加强版向上淡入</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">淡出</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="fadeOut"><span class="t">淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutDown"><span class="t">向下淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutDownBig"><span class="t">加强版向下淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutLeft"><span class="t">向左淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutLeftBig"><span class="t">加强版向左淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutRight"><span class="t">向右淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutRightBig"><span class="t">加强版向右淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutUp"><span class="t">向上淡出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutUpBig"><span class="t">加强版向上淡出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">翻转</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="flip"><span class="t">翻转</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipInX"><span class="t">X轴翻转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipInY"><span class="t">Y轴翻转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipOutX"><span class="t">X轴翻转退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipOutY"><span class="t">Y轴翻转退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">惯性</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="lightSpeedIn"><span class="t">惯性进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="lightSpeedOut"><span class="t">惯性退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">旋转进入</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="rotateIn"><span class="t">旋转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInDownLeft"><span class="t">左上方旋转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInDownRight"><span class="t">右上方旋转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInUpLeft"><span class="t">右下方旋转进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInUpRight"><span class="t">左下方旋转进入</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">旋转退出</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="rotateOut"><span class="t">旋转退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutDownLeft"><span class="t">右下方旋转退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutDownRight"><span class="t">左下方旋转退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutUpLeft"><span class="t">左上方旋转退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutUpRight"><span class="t">右上方旋转退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">滑动进入</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="slideInDown"><span class="t">向下滑动进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInLeft"><span class="t">向右滑动进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInRight"><span class="t">向左滑动进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInUp"><span class="t">向上滑动进入</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">滑动退出</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="slideOutDown"><span class="t">向下滑动退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutLeft"><span class="t">向左滑动退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutRight"><span class="t">向右滑动退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutUp"><span class="t">向上滑动退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">特殊</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="hinge"><span class="t">悬挂掉落</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rollIn"><span class="t">滚过来</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rollOut"><span class="t">滚粗去</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">放大进入</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="zoomIn"><span class="t">放大进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInDown"><span class="t">向下放大进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInLeft"><span class="t">向右放大进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInRight"><span class="t">向左放大进入</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInUp"><span class="t">向上放大进入</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">缩小退出</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="zoomOut"><span class="t">缩小退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutDown"><span class="t">向下缩小退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutLeft"><span class="t">向左缩小退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutRight"><span class="t">向右缩小退出</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutUp"><span class="t">向上缩小退出</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aniCate" id="aniCate2" style="display:none">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">基本配置</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tb_form pl0 pr0">
+						<table>
+							<tbody>
+								<tr>
+									<th>飞碟名称</th>
+									<td>
+										<div class="inputVali inputHelp">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initFile" class="key_val" type="text" data-type="text" placeholder="自定义" value="自定义01" maxlength="10" title="起一个好记的名字" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>航线名称</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-name" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initName" class="key_val" type="text" data-type="string" placeholder="animate_name" value="airline01" maxlength="10" title="在css代码中的名字，不能为空" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>持续时间</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-duration" data-units="s">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initTime" class="key_val" type="text" data-type="float" placeholder="0" value="1" maxlength="3" title="动画播放时长" />
+											</div>
+											<span class="units">秒(s)</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>延迟执行</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-delay" data-units="s">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initDelay" class="key_val" type="text" data-type="float" placeholder="0" value="0" maxlength="3" title="动画开始前的预备时间" />
+											</div>
+											<span class="units">秒(s)</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>执行次数</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-iteration-count" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initCount" class="key_val" type="text" data-type="number" placeholder="0" value="1" maxlength="10" title="动画播放次数，infinite为无限循环" />
+											</div>
+											<span>次</span>
+											<div class="mt5">
+												<span class="btn btn3 e_btn_s e_btn_inb">
+													<a tabindex="0" href="javascript:;" onclick="$('#ani_initCount').val('infinite').attr('disabled',true);$(this).parents('.inputVali').removeClass('inputCur').siblings('.f_ins').remove();ani_direction();commonInit();">无限循环</a>
+												</span>
+												<span class="btn btn3 e_btn_s e_btn_inb">
+													<a tabindex="0" href="javascript:;" onclick="$('#ani_initCount').val('1').attr('disabled',false);ani_direction();$(this).parents('.inputVali').removeClass('inputCur').siblings('.f_ins').remove();commonInit();">播放1次</a>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>偶次播放倒带</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-direction" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initDirection" class="key_val" disabled="disabled" title="定义是否应该轮流反向播放动画，如选择偶次播放倒带，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）向后播放">
+													<option value="normal">normal: 关闭偶次播放倒带</option>
+													<option value="alternate">alternate: 开启偶次播放倒带</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>过渡效果</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-timing-function" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initTimingfunction1" class="key_val" title="定义动画加速度">
+													<option value="linear">linear: 匀速</option>
+													<option value="ease">ease: 渐慢</option>
+													<option value="ease-in">ease-in: 加速</option>
+													<option value="ease-out">ease-out: 减速</option>
+													<option value="ease-in-out">ease-in-out :慢快慢</option>
+													<option value="steps">steps: 逐帧</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr id="ani_initTimingfunction2" style=" display:none;">
+									<th>逐帧数量</th>
+									<td>
+										<div class="inputVali inputHelp">
+											<div class="inputTxt" style="width:30%;">
+												<input tabindex="0" class="key_val" type="text" data-type="number" placeholder="1" value="1" maxlength="3" title="将时间轴等分为若干区间，以划分区间的端点为关键帧进行逐帧播放" />
+											</div>
+											<span class="units">帧</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>始终模式</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-fill-mode" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initFillmode" class="key_val" title="动画开始前和结束后的状态">
+													<option value="none">none: 不启用始终模式</option>
+													<option value="forwards">forwards: 动画结束后以最终状态停止</option>
+													<option value="backwards">backwards:动画开始前以最初状态预备</option>
+													<option value="both">both: 同时应用2种模式</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>变形原点</th>
+									<td>
+										<div class="key_common inputHelp" data-role="transform-origin" style="display:none">
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initOrigin1" class="key_val" type="text" title="定义元件的变形原点" value="center" maxlength="10" /></span><span class="ml5"><input tabindex="0" id="ani_initOrigin2" class="inputTxt e_input_ra key_val" type="text" style="width:30%" value="center" maxlength="10" />
+											</div>
+										</div>
+										<div class="mt5 inputHelp">
+											<div id="control_q" class="inputTxt control_q clear">
+												<div tabindex="0" data-og1="left" data-og2="top" class="c c1 inputVir" title="以左上角为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="top" class="c c2 inputVir" title="以正上方为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="top" class="c c3 inputVir" title="以右上角为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="left" data-og2="center" class="c c4 inputVir" title="以正左方为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="center" class="c c5 cur inputVir" title="以正中心为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="center" class="c c6 inputVir" title="以正右方为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="left" data-og2="bottom" class="c c7 inputVir" title="以左下角为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="bottom" class="c c8 inputVir" title="以正下方为变形原点" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="bottom" class="c c9 inputVir" title="以右下角为变形原点" onclick="control_q(this)"><i></i></div>
+											</div>
+										</div>
+										<div class="mt5" style="display:none">
+											<a href="javascript:;" class="btn btn1" onclick="$('#ani_initOrigin1').val('left');$('#ani_initOrigin2').val('top');commonInit();"><span class="t">左上</span></a>
+											<a href="javascript:;" class="btn btn1" onclick="$('#ani_initOrigin1').val('right');$('#ani_initOrigin2').val('top');commonInit();"><span class="t">右上</span></a>
+											<a href="javascript:;" class="btn btn1" onclick="$('#ani_initOrigin1').val('right');$('#ani_initOrigin2').val('bottom');commonInit();"><span class="t">右下</span></a>
+											<a href="javascript:;" class="btn btn1" onclick="$('#ani_initOrigin1').val('left');$('#ani_initOrigin2').val('bottom');commonInit();"><span class="t">左下</span></a>
+											<a href="javascript:;" class="btn btn1" onclick="$('#ani_initOrigin1').val('center');$('#ani_initOrigin2').val('center');commonInit();"><span class="t">中心</span></a>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-clock mr5 vt_m"></span><span class="vt_m">时间轴</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="m_timeline">
+						<div class="bd">
+							<span tabindex="0" class="lb lb_select key_lb" style="left:0%" title="点击编辑属性"><span class="key_pct">0</span>%<a class="lb_del" title="删除关键帧" href="javascript:;">&times;</a><span class="ar"></span></span>
+						</div>
+						<div class="ft">
+							<div id="playTL">
+								<div class="tl_arr"></div>
+							</div>
+						</div>
+					</div>
+					<div class="tb_form pl0 pr0 mt10">
+						<table>
+							<tbody>
+								<tr>
+									<th>插入关键帧</th>
+									<td>
+										<div class="dis_inb inputVali inputHelp" style="width:50%">
+											<div class="inputTxt">
+												<input tabindex="0" id="key_new" type="text" data-type="number" placeholder="0" value="100" maxlength="3" title="设置动画的关键帧，范围0-100，回车确认。" />
+											</div>
+										</div>
+										<span class="tx_14">%</span>
+										<div class="mt5">
+											<span class="btn btn3 e_btn_s e_btn_inb">
+												<a href="javascript:;" id="insertKey"><span class="icon-plus mr5 vt_m"></span><span class="vt_m">插入关键帧</span></a>
+											</span>
+											<span class="btn btn3 e_btn_s e_btn_inb" style="display:none">
+												<a id="insertBlankKey" href="javascript:;"><span class="icon-plus mr5 vt_m"></span><span class="vt_m">插入空白关键帧</span></a>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">关键帧</span><span class="ml10 c_t2 vt_m">(<span id="keyStep" class="keyStep">0</span>%)</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tb_form pl0 pr0">
+						<table id="keytb_demo" style="display:none">
+							<tr>
+								<th><span class="key_property"></span>:</th>
+								<td>
+									<div class="dis_inb" style="width:50%">
+										<div class="inputTxt">
+											<input tabindex="0" class="key_val tx_c" data-units="" type="text" maxlength="10" value="" title="点击属性以编辑" />
+										</div>
+									</div>
+									<span class="units"></span>
+									<div class="dis_inb tx_r" style="width:40%">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<a href="javascript:;" class="pro_del" title="删除属性"><span class="icon-bin"></span></a>
+										</span>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<table id="keytb" class="keytb">
+						</table>
+						<div id="f_emptypro" class="pt10 pb10 tx_c tx_16 tx_yh c_t3">此关键帧没有设置属性</div>
+						<input type="hidden" id="trans_merge" value="" />
+						<hr class="hr1 mt15" />
+						<table class="mt15">
+							<tbody>
+								<tr>
+									<th>添加属性</th>
+									<td>
+										<div class="dis_inb" style="width:50%">
+											<div class="inputTxt">
+												<select id="newPro">
+													<optgroup label="普通属性">
+														<option value="width" data-units="需要单位，如:100px或50%，">width: 宽度</option>
+														<option value="height" data-units="需要单位，如:100px或50%，">height: 高度</option>
+														<option value="background" data-units="填写16进制颜色，如#FFFFFF，">background: 背景</option>
+														<option value="border-radius" data-units="需要单位，如:5px或50%，">border-radius: 圆角</option>
+														<option value="top" data-units="需要单位，如:100px或50%，">top: 顶部距离</option>
+														<option value="right" data-units="需要单位，如:100px或50%，">right: 右侧距离</option>
+														<option value="bottom" data-units="需要单位，如:100px或50%，">bottom: 底部距离</option>
+														<option value="left" data-units="需要单位，如:100px或50%，">left: 左侧距离</option>
+														<option value="opacity" data-units="取值范围0-1，0为完全透明">opacity: 透明度</option>
+													</optgroup>
+													<optgroup label="进阶属性">
+														<option value="rotateX" data-transtype="trans" data-transsort="10" data-units="需要单位，如:360deg，">rotateX: X轴旋转</option>
+														<option value="rotateY" data-transtype="trans" data-transsort="11" data-units="需要单位，如:360deg，">rotateY: Y轴旋转</option>
+														<option value="rotateZ" data-transtype="trans" data-transsort="12" data-units="需要单位，如:360deg，">rotateZ: Z轴旋转</option>
+														<option value="translateX" data-transtype="trans" data-transsort="2" data-units="需要单位，如:100px或50%，">translateX: X轴位置变换</option>
+														<option value="translateY" data-transtype="trans" data-transsort="3" data-units="需要单位，如:100px或50%，">translateY: Y轴位置变换</option>
+														<option value="translateZ" data-transtype="trans" data-transsort="4" data-units="需要单位，如:100px或50%，">translateZ: Z轴位置变换</option>
+														<option value="scaleX" data-transtype="trans" data-transsort="5" data-units="填写缩放倍数，如1.5，">scaleX: X轴缩放</option>
+														<option value="scaleY" data-transtype="trans" data-transsort="6" data-units="填写缩放倍数，如1.5，">scaleY: Y轴缩放</option>
+														<option value="scaleZ" data-transtype="trans" data-transsort="7" data-units="填写缩放倍数，如1.5，">scaleZ: Z轴缩放</option>
+														<option value="skewX" data-transtype="trans" data-transsort="8" data-units="需要单位，如:360deg，">skewX: X轴倾斜</option>
+														<option value="skewY" data-transtype="trans" data-transsort="9" data-units="需要单位，如:360deg，">skewY: Y轴倾斜</option>
+													</optgroup>
+													<optgroup label="炫酷属性">
+														<option value="perspective" data-transtype="trans" data-transsort="1" data-units="需要单位，如:100px，值越大观察距离越远，">perspective: 透视</option>
+													</optgroup>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+										<div class="inputHelp dis_inb" style="width:40%">
+											<div class="inputTxt">
+												<input tabindex="0" id="newVal" type="text" title="回车键连续输入下一属性" placeholder="属性值" maxlength="10" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>&nbsp;</th>
+									<td>
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<a href="javascript:;" id="addPro"><span class="icon-plus mr5 vt_m"></span><span class="vt_m">添加属性</span></a>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr class="hr1 mt10" />
+						<div class="mt20 tx_c">
+							<span id="aniPlay" class="btn btn1 e_btn_inb">
+								<button><span class="icon-play3"></span></button>
+							</span><span id="aniPause" class="btn btn3 e_btn_inb ml10">
+								<button disabled="disabled"><span class="icon-pause2"></span></button>
+							</span><span id="aniStop" class="btn btn3 e_btn_inb ml10">
+								<button disabled="disabled"><span class="icon-stop2"></span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aniCate" id="aniCate3" style="display:none">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">变形</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transform"><span class="t">transform[变形基础]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotate"><span class="t">rotate()[旋转]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="scale"><span class="t">scale()[缩放]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="translate"><span class="t">translate()[位移]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="skew"><span class="t">skew()[倾斜]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="matrix"><span class="t">matrix()[矩阵变形]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="perspective"><span class="t">perspective[透视]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">过渡</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transition-property"><span class="t">transition-property[过渡的CSS属性]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-duration"><span class="t">transition-duration[过渡时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-delay"><span class="t">transition-delay[延迟时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-timing-function"><span class="t">transition-timing-function[过渡效果]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">动画</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="animation-name"><span class="t">animation-name[航线名称]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-duration"><span class="t">animation-duration[动画持续时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-timing-function"><span class="t">animation-timing-function[播放方式]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-delay"><span class="t">animation-delay[开始播放时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-iteration-count"><span class="t">animation-iteration-count[播放次数]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-direction"><span class="t">animation-direction[播放方向]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-fill-mode"><span class="t">animation-fill-mode[播放后的状态]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-play-state"><span class="t">animation-play-state[对象动画的状态]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow mr5 vt_m"></span><span class="vt_m">关联属性</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transform-origin"><span class="t">transform-origin[变形原点]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="perspective-origin"><span class="t">perspective-origin[透视原点]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="backface-visibility"><span class="t">backface-visibility[隐藏内容的背面]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transform-style"><span class="t">transform-style[3D呈现]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<article id="article">
+		<div class="m_corearea">
+			<div class="m_corearea_bd clear">
+				<div class="m_stage x-panel img_bg3"><!-- 图片拖曳范围 -->
+					<div id="f_stage_alert" class="noticebar" style="position:absolute; z-index:1; top:62px; left:0; width:100%; padding:0 440px; box-sizing:border-box; display:none;">
+						<div class="bd">
+						<div class="con pl10 pr10 pt5 pb5 tx_c tx_14 c_t2 tx_yh"></div>
+						</div>
+					</div>
+					<div class="animationWrap">
+						<div class="head"></div>
+						<div class="inner">
+							<div class="bd">
+								<img id="animation" class="airline01" src="./images/gang.png" alt="" />
+								<div class="pos" style="display:none"></div>
+							</div>
+						</div>
+						<div class="foot">
+							<div class="txtDesc tx_12 c_t2"><span class="bd"><span class="res"><span id="txtDesc" class="vt_m"></span></span></span></div>
+						</div>
+					</div>
+				</div>
+				<div class="m_property">
+					<div id="css_display">
+						<div class="SC">
+							<div class="SC_hd">
+								<h2 class="tit"><strong class="tit_tx"><span class="icon-rocket mr5 vt_m"></span><span class="vt_m">显示</span></strong></h2>
+								<div class="opt"></div>
+							</div>
+							<div class="SC_bd">
+								<div class="tb_form pl0 pr0">
+									<table>
+										<tbody>
+											<tr>
+												<th>设备</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_device">
+																<option value="0">Desktop</option>
+																<option value="device_ip4">iPhone4(640*960)</option>
+																<option value="device_ip5">iPhone5(640*1136)</option>
+																<option value="device_ip6">iPhone6(750*1334)</option>
+																<option value="device_ip6plus">iPhone6 Plus(1080*1920)</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th>背景</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_bg">
+																<option value="img_bg3">栅格</option>
+																<option value="img_bg4">太空</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th>选择飞碟</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_ufo">
+																<option value="./images/gang.png">GANG</option>
+																<option value="./images/ufo1.png">1号</option>
+																<option value="./images/ufo2.png">2号</option>
+																<option value="./images/ufo3.png">3号</option>
+																<option value="./images/ufo4.png">4号</option>
+																<option value="./images/ufo5.png">5号</option>
+																<option value="./images/ufo6.png">6号</option>
+																<option value="./images/ufo7.png">7号</option>
+																<option value="./images/ufo8.png">8号</option>
+																<option value="./images/ufo9.png">9号</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+													<div class="mt5">
+														<span class="btn btn3 e_btn_s e_btn_inb">
+															<a tabindex="0" id="upload" href="javascript:;">自定义飞碟图片</a>
+														</span>
+														<form style="display:none" action="javascript:;"><input type="file" id="file" accept=".jpg,.jpeg,.gif,.png,.bmp"></form>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="css_use">
+						<div class="inner">
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">引入文件</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="importAniCss" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m">复制</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<pre id="importAniCss" class="highlight language-html code">&lt;link rel="stylesheet" type="text/css" href="http://static.didialift.com/pinche/css/animate.min.css" /&gt;</pre>
+								</div>
+							</div>
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">使用此动画</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="animatecssPreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m">复制</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<pre id="animatecssPreview" class="highlight language-javascript code">$('#animation').addClass('animated <span id="animatecssMet">bounce</span>');</pre>
+								</div>
+							</div>
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">回调函数(可选)</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="f_ani_callback" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m">复制</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<div id="animatecssPreview">
+<pre id="f_ani_callback" class="highlight language-javascript code">$('#animation').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  // Hello World!
+});</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="css_code" style="display:none">
+						<div class="inner">
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">CSS</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" id="unlockedit" class="btn btn1" title="点击解锁编辑"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m">解锁编辑</span></button>
+											<button tabindex="0" id="lockedit" class="btn btn1" title="点击锁定" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m">锁定编辑</span></button>
+											<button tabindex="0" class="btn btn1" title="点击恢复配置动画" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m">恢复更改</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="codePreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m">复制</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<div id="codePreview">
+<pre class="codePreview highlight language-css code"><style id="codewrap" style="display:block;" contenteditable="false">#animation{
+}</style></pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ajaxHtml" class="m_eassy" data-src="library/transform.html" style="display:none"></div>
+	</article>
+</div>
+<div class="copyright mt20">
+	<div class="bd" style="display:none">
+		<p>All above are <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons friendly</a>.</p>
+	</div>
+</div>
+<div class="noimg">
+	<img id="noBodyimg" onload="loadNoBody(this)" src="" />
+	<img id="noStageimg" onload="loadNoStage(this)" src="" />
+</div>
+<!--[if lte IE 9]>
+<div class="iealert"><div class="inner">请升级您的浏览器，至少升到IE10差不多就能用了</div></div>
+<style>
+.topnav,.topnav_ph,.container,#qLtempOverlay{ display:none}
+</style>
+<![endif]-->
+
+<style id="customStyle"></style>
+<style id="styleTL"></style>
+<script src="http://static.didialift.com/pinche/js/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.js"></script>
+<script src="ZeroClipboard.min.js"></script>
+<script src="mod_imagebase64.js"></script>
+<script src="jquery.json.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<div id="loadHtml">
+    <div class="mod_detail">
+        <div class="column">
+            <h1>animation-fill-mode</h1>
+        </div>
+        <!--语法 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>语法</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_css">
+                            <strong>animation-fill-mode:</strong> <span class="default">none</span> | forwards | backwards | both; 检索或设置对象动画时间之外的状态。
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="20%">语法项目</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>初始值</td>
+                                <td>none</td>
+                            </tr>
+                            <tr>
+                                <td>适用于</td>
+                                <td>所有元素</td>
+                            </tr>
+                            <tr>
+                                <td>可否继承</td>
+                                <td>否</td>
+                            </tr>
+                            <!--<tr>
+                                <td>单位</td>
+                                <td>S</td>
+                            </tr>-->
+                            <tr>
+                                <td>媒介</td>
+                                <td>视觉</td>
+                            </tr>
+                            <tr>
+                                <td>版本</td>
+                                <td>CSS3.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--语法 end-->
+        <!--说明 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>说明</h2>
+                <div class="intro" style=" overflow:hidden;">
+                    <p>检索或设置对象动画时间之外的状态。</p>
+                    <p>如果提供多个属性值，以逗号进行分隔。</p>
+                </div>
+            </div>
+        </div>
+        <!--说明 end-->
+        <!--取值 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>取值</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_value">
+                            <p>none：默认值。不设置对象动画之外的状态</p>
+                            <p>forwards：结束后保持动画结束时的状态，但当animation-direction为0，则动画不执行，持续保持动画开始时的状态</p>
+                            <p>backwards：结束后返回动画开始时的状态</p>
+                            <p>both：结束后可遵循forwards和backwards两个规则。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--取值 end-->
+        
+        <!--实例代码 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>实例代码</h2>
+                <div class="code">
+                    <div class="code_inner">
+                        <span class="mod_tag">CSS</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_css"></div></span>
+                        <textarea id="css_code" class="code_textarea"></textarea>
+                        <pre class="language-css prettyprint highlight lang-css linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="pun">.</span><span class="pln">demo_box</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">:</span><span class="pln">f1 </span><span class="lit">2s</span><span class="pln"> </span><span class="lit">0.5s</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> &nbsp;linear</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">:</span><span class="pln">f1 </span><span class="lit">2s</span><span class="pln"> </span><span class="lit">0.5s</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> &nbsp;linear</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">relative</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">100px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">100px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; &nbsp; margin</span><span class="pun">:</span><span class="lit">10px</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L8"><span class="pln">&nbsp; &nbsp; overflow</span><span class="pun">:</span><span class="pln">hidden</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L0"><span class="pln"></span><span class="pun">.</span><span class="pln">forwards</span><span class="pun">{</span><span class="pln"> </span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">-</span><span class="pln">fill</span><span class="pun">-</span><span class="pln">mode</span><span class="pun">:</span><span class="pln">forwards</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">-</span><span class="pln">fill</span><span class="pun">-</span><span class="pln">mode</span><span class="pun">:</span><span class="pln">forwards</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L4"><span class="pln"></span><span class="pun">.</span><span class="pln">backwards</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">-</span><span class="pln">fill</span><span class="pun">-</span><span class="pln">mode</span><span class="pun">:</span><span class="pln">backwards</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">animation</span><span class="pun">-</span><span class="pln">fill</span><span class="pun">-</span><span class="pln">mode</span><span class="pun">:</span><span class="pln">backwards</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">@-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">keyframes f1</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L9"><span class="pln">&nbsp; &nbsp; </span><span class="lit">0</span><span class="pun">%{</span><span class="pln">left</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;}</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; </span><span class="lit">100</span><span class="pun">%{</span><span class="pln">left</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;}</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">@-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">keyframes f1</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span><span class="lit">0</span><span class="pun">%{</span><span class="pln">left</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;}</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; </span><span class="lit">100</span><span class="pun">%{</span><span class="pln">left</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;}</span><span class="pln"></span><br></li><li class="L5"><span class="pln"></span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></li></ol></pre>
+                    </div>
+                    <div class="code_inner">
+                        <span class="mod_tag">HTML</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_html"></div></span>
+                        <textarea id="html_code" class="code_textarea"></textarea>
+                        <pre class="language-html prettyprint highlight lang-html linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box forwards"</span><span class="tag">&gt;</span><span class="pln">我留在终点</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box backwards"</span><span class="tag">&gt;</span><span class="pln">我只回到原点</span><span class="tag">&lt;/div&gt;</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></li></ol></pre>
+                    </div>
+                    <a href="#" id="run_demo" class="btn_run">运行</a>
+                    <a href="#" id="run_demo_new" class="btn_run">新窗口运行</a>
+                    
+                </div>
+            </div>
+        </div>
+        <!--实例代码 end-->
+        <!--兼容性 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>兼容性</h2>
+                <div class="mod_table">
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th class="ie" width="20%">IE</th>
+                                <th class="firefox" width="20%">Firefox</th>
+                                <th class="opera" width="20%">Opera</th>
+                                <th class="safari" width="20%">Safari</th>
+                                <th class="chrome" width="20%">Chrome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IE 10+</td>
+                                <td>Firefox 3.5+</td>
+                                <td>目前暂无版本支持</td>
+                                <td>Safari 10+</td>
+                                <td>Chrome 2.0+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--兼容性 end-->
+        <!--<div id="js_gui_suc" class="gui_success hidden">复制代码成功!</div>-->
+        <div id="js_gui_suc" class="pop_dialog hidden" style="display:;margin:-100px 0 0 -120px;width:240px;">
+            <div class="inner">
+                <!--小浮层-->
+                <div class="small">
+                    <i class="icon_success"></i>
+                    <h4>代码复制成功</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

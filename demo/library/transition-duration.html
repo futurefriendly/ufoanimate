@@ -1,0 +1,145 @@
+<div id="loadHtml">
+    <div class="mod_detail">
+        <div class="column">
+            <h1>transition-duration</h1>
+        </div>
+        <!--语法 star-->
+        <div class="mod_article">
+            <div class="column">
+                <div class="intro">
+                    <p>transition-duration用来定义转换动画的时间长度，即从旧属性换到新属性花费的时间，单位为秒。</p>
+                    <p>默认情况下动画过渡时间为0秒，所以当我们指定元素动画时会看不到过渡的过程直接看到结果。</p>
+                </div>
+                <h2>语法</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_css">
+                            <strong>transition-duration:</strong>&lt;time&gt;[ ,&lt;time&gt;]*;设置动画的过渡时间。
+                        </div>
+                    </div>
+                </div>
+                <div class="mod_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="20%">语法项目</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>初始值</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>适用于</td>
+                                <td>所有元素，以及:before和:after伪元素</td>
+                            </tr>
+                            <tr>
+                                <td>可否继承</td>
+                                <td>否</td>
+                            </tr>
+                            <tr>
+                                <td>媒介</td>
+                                <td>视觉</td>
+                            </tr>
+                            <tr>
+                                <td>版本</td>
+                                <td>CSS3.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--语法 end-->
+        <!--说明 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>说明</h2>
+                <div class="intro" style=" overflow:hidden;">
+                    <p>transition-duration可以设置动画过渡的时间[执行时间]，默认值0表示不过渡直接看到执行后的结果。单位是秒，也可以是毫秒。</p></div>
+            </div>
+        </div>
+        <!--说明 end-->
+        <!--取值 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>取值</h2>
+                <div class="code">
+                    <div class="code_box">
+                        <div class="code_value">
+                            <p>0：不执行过渡，直接看到结果。</p>
+                            <p>time：指定动画执行的时间。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--取值 end-->
+        
+        <!--实例代码 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>实例代码</h2>
+                <div class="code">
+                    <div class="code_inner">
+                        <span class="mod_tag">CSS</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_css"></div></span>
+                        <textarea id="css_code" class="code_textarea"></textarea>
+                        <pre class="language-css prettyprint highlight lang-css linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="pun">.</span><span class="pln">transition_property_1</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">ease all</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">ease all</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">duration</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">duration</span><span class="pun">:</span><span class="lit">0</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">absolute</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">10px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln">&nbsp; &nbsp; top</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">.</span><span class="pln">transition_property_2</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">ease all</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln">ease all</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">duration</span><span class="pun">:</span><span class="lit">5s</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L3"><span class="pln">&nbsp; &nbsp; </span><span class="pun">-</span><span class="pln">moz</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">-</span><span class="pln">duration</span><span class="pun">:</span><span class="lit">5s</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L4"><span class="pln">&nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln">absolute</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L5"><span class="pln">&nbsp; &nbsp; left</span><span class="pun">:</span><span class="lit">250px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L6"><span class="pln">&nbsp; &nbsp; top</span><span class="pun">:</span><span class="lit">50px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L7"><span class="pln"></span><span class="pun">}</span><span class="pln"></span><br></li><li class="L8"><span class="pln"></span><span class="pun">.</span><span class="pln">transition_property_1</span><span class="pun">:</span><span class="pln">hover</span><span class="pun">,</span><span class="pln"></span><br></li><li class="L9"><span class="pln"></span><span class="pun">.</span><span class="pln">transition_property_2</span><span class="pun">:</span><span class="pln">hover</span><span class="pun">{</span><span class="pln"></span><br></li><li class="L0"><span class="pln">&nbsp; &nbsp; width</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L1"><span class="pln">&nbsp; &nbsp; height</span><span class="pun">:</span><span class="lit">300px</span><span class="pun">;</span><span class="pln"></span><br></li><li class="L2"><span class="pln"></span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></li></ol></pre>
+                    </div>
+                    <div class="code_inner">
+                        <span class="mod_tag">HTML</span>
+                        <span class="mod_copy">复制代码<div class="clipboardswf" id="copy_demo_html"></div></span>
+                        <textarea id="html_code" class="code_textarea">                        </textarea>
+                        <pre class="language-html prettyprint highlight lang-html linenums theme-balupton prettyprint-has" style="overflow: hidden; white-space: pre-wrap; max-height: none;"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box transition_property_1"</span><span class="tag">&gt;</span><span class="pln">动画没有过渡时间</span><span class="tag">&lt;/div&gt;</span><span class="pln"></span><br></li><li class="L1"><span class="pln"></span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"demo_box transition_property_2"</span><span class="tag">&gt;</span><span class="pln">动画执行5秒</span><span class="tag">&lt;/div&gt;</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></li></ol></pre>
+                    </div>
+                    <a href="#" id="run_demo" class="btn_run">运行</a>
+                    <a href="#" id="run_demo_new" class="btn_run">新窗口运行</a>
+                    
+                </div>
+            </div>
+        </div>
+        <!--实例代码 end-->
+        <!--兼容性 star-->
+        <div class="mod_article">
+            <div class="column">
+                <h2>兼容性</h2>
+                <div class="mod_table">
+                    <table class="center">
+                        <thead>
+                            <tr>
+                                <th class="ie" width="20%">IE</th>
+                                <th class="firefox" width="20%">Firefox</th>
+                                <th class="opera" width="20%">Opera</th>
+                                <th class="safari" width="20%">Safari</th>
+                                <th class="chrome" width="20%">Chrome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IE 10+</td>
+                                <td>Firefox 3.5+</td>
+                                <td>Opera 11.50+</td>
+                                <td>Safari 10+</td>
+                                <td>Chrome 2.0+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--兼容性 end-->
+        <!--<div id="js_gui_suc" class="gui_success hidden">复制代码成功!</div>-->
+        <div id="js_gui_suc" class="pop_dialog hidden" style="display:;margin:-100px 0 0 -120px;width:240px;">
+            <div class="inner">
+                <!--小浮层-->
+                <div class="small">
+                    <i class="icon_success"></i>
+                    <h4>代码复制成功</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

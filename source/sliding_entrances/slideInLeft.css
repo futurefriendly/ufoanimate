@@ -1,0 +1,13 @@
+@-webkit-keyframes slideInLeft {
+	from { -webkit-transform: translate3d(-100%, 0, 0); visibility: visible; }
+	100% { -webkit-transform: translate3d(0, 0, 0); }
+}
+@keyframes slideInLeft {
+	from { transform: translate3d(-100%, 0, 0); visibility: visible; }
+	100% { transform: translate3d(0, 0, 0); }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
