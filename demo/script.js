@@ -986,7 +986,7 @@ $(function(){
 	});
 	$('input[tabindex="0"],.key_val').on('focus',function(){
 		$(this)[0].focused = true;
-		$(this)[0].select();
+		$(this)[0].selected = true;
 	}).on('mouseup',function(){
 		if($(this)[0].focused){
 			$(this)[0].focused = false;
