@@ -49,7 +49,8 @@ function bgBodySize(res){
 
 	var bgImg = new Image();
 
-	bgImg.src = $('body').css('background-image').replace("url(","").replace(")","");
+	bgImg.src = $('body').css('background-image').replace("url(","").replace(")","").replace(/\"/g,"");
+
 	$('#noBodyimg').data('res',res).attr('src',bgImg.src);
 
 }
@@ -57,7 +58,7 @@ function bgStageSize(res){
 
 	var bgImg = new Image();
 
-	bgImg.src = $('.m_stage .inner').css('background-image').replace("url(","").replace(")","");
+	bgImg.src = $('.m_stage .inner').css('background-image').replace("url(","").replace(")","").replace(/\"/g,"");
 	$('#noStageimg').data('res',res).attr('src',bgImg.src);
 
 }
