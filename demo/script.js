@@ -1346,7 +1346,7 @@ function togglePanel(){
 // 自定义图片
 function customPic(e){
 	$('#set_ufo .customPic').remove();
-	$('#set_ufo').append('<option class="customPic" value="'+ e.target.result +'">自定义</option>').val(e.target.result);
+	$('#set_ufo').append('<option class="customPic" value="'+ e.target.result +'">Custom UFO</option>').val(e.target.result);
 }
 
 window.onresize = function(){
