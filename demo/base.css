@@ -133,6 +133,15 @@ body .pl0{ padding-left:0!important}
 .tx_ar{ font-family:Arial}
 .tx_ss{ font-family:sans-serif}
 .tx_code{ font-family:Courier New}
+.tx_osw{ font-family:oswald,sans-serif}
+
+@font-face {
+    font-family: 'oswald';
+    src: url('./fonts/oswald-webfont.woff2') format('woff2'),
+         url('./fonts/oswald-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 字号 */
 .tx_-2{ font-size:.75em}
@@ -255,8 +264,8 @@ body .bor0{ border:none!important}
 .tb_form table{ width:100%;}
 .tb_form th,
 .tb_form td{ padding:3px 0; vertical-align:middle;}
-.tb_form th{ width:130px; padding-top:10px; font-size:16px; font-family:Helvetica,Microsoft Yahei,sans-serif; vertical-align:top;}
-.tb_form td{ font-size:14px; font-family:Helvetica,Microsoft Yahei,sans-serif}
+.tb_form th{ width:130px; padding-top:6px; font-size:16px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif; vertical-align:top;}
+.tb_form td{ font-size:14px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif}
 
 /* 文本框和文本域
 ----------------------------------------------------------------*/
@@ -265,7 +274,7 @@ body .bor0{ border:none!important}
 
 .inputTxt input,
 .inputTxt textarea,
-.inputTxt select{ width:100%; height:34px; padding:5px 10px; color:#999; border:#333 1px solid; background:#333; font:16px/1.5 Helvetica,Microsoft Yahei,sans-serif; border-radius:3px; vertical-align:middle;
+.inputTxt select{ width:100%; height:34px; padding:5px 10px; color:#999; border:#333 1px solid; background:#333; font:16px/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; border-radius:3px; vertical-align:middle;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-o-box-sizing:border-box;
@@ -307,7 +316,7 @@ body .bor0{ border:none!important}
 .inputCheck input[type="checkbox"]{ background-position:-42px 0}
 .inputCheck input[type="checkbox"]:checked{ background-position:-63px 0}
 
-.inputTxt .helptxt{ position:absolute; top:0; left:100%; margin-left:10px; width:240px; padding:10px; box-sizing:border-box; background-color:#111; border:#111 1px solid; z-index:1; border-radius:3px; font-size:12px}
+.inputTxt .helptxt{ position:absolute; top:0; left:100%; margin-left:10px; width:240px; padding:10px; box-sizing:border-box; background-color:#111; border:#111 1px solid; z-index:1; border-radius:3px; font-size:12px;}
 .inputTxt .helptxt:before{ content:''; position:absolute; left:-7px; top:10px; width:10px; height:10px; border:#111 1px solid; background-color:#111; border-right:none; border-bottom:none;
 	-webkit-transform:rotate(-45deg);
 	-moz-transform:rotate(-45deg);
@@ -451,7 +460,7 @@ body .bor0{ border:none!important}
 .e_btn_s a:hover,
 .e_btn_s a:active,
 .e_btn_s input,
-.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:Helvetica,Arial,sans-serif}
+.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:oswald,Helvetica,Arial,sans-serif}
 
 .btn input[disabled="disabled"],
 .btn button[disabled="disabled"]{ background:#3a4148; border:#3a4148 1px solid; cursor:not-allowed;}
@@ -472,7 +481,7 @@ body .bor0{ border:none!important}
 /* 提示
 ----------------------------------------------------------------*/
 
-.noticebar .bd{ position:relative; background:#111; border-radius:3px;}
+.noticebar .bd{ position:relative; background:#111; border-radius:3px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif;}
 .noticebar a{ color:#fff}
 
 
