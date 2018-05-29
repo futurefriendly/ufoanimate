@@ -1,3 +1,104 @@
+// 检测浏览器语言
+
+function checklang(){
+  
+    /* get browser default lang */    
+    if (navigator.userLanguage) {    
+        baseLang = navigator.userLanguage.substring(0,2).toLowerCase();    
+    } else {    
+        baseLang = navigator.language.substring(0,2).toLowerCase();    
+    }
+    switchlang(baseLang);
+}
+
+function switchlang(bl){
+
+	var lang = {
+		la_1 : ['UFO Animate (Localizationing...)','UFO Animate (Localizationing...)'],
+		la_2 : ['标准轨迹','Animate.css'],
+		la_3 : ['自定义轨迹','Custom'],
+		la_4 : ['标准轨迹','Animate.css'],
+		la_5 : ['CSS手册','Manual (Chinese Only)'],
+		la_6 : ['引起注意','Attention Seekers'],
+		la_7 : ['弹跳','bounce'],
+		la_8 : ['闪烁','flash'],
+		la_9 : ['果冻','jello'],
+		la_10 : ['脉冲','pulse'],
+		la_11 : ['橡皮','rubberBand'],
+		la_12 : ['抖动','shake'],
+		la_13 : ['钟摆','swing'],
+		la_14 : ['秋千','tada'],
+		la_15 : ['摇晃','wobble'],
+		la_16 : ['弹跳进入','Bouncing Entrances'],
+		la_17 : ['弹跳向内进入','bounceIn'],
+		la_18 : ['弹跳向下进入','bounceInDown'],
+		la_19 : ['弹跳向右进入','bounceInLeft'],
+		la_20 : ['弹跳向左进入','bounceInRight'],
+		la_21 : ['弹跳向上进入','bounceInUp'],
+		la_22 : ['弹跳退出','Bouncing Exits'],
+		la_23 : ['弹跳向外退出','bounceOut'],
+		la_24 : ['弹跳向下退出','bounceOutDown'],
+		la_25 : ['弹跳向左退出','bounceOutLeft'],
+		la_26 : ['弹跳向右退出','bounceOutRight'],
+		la_27 : ['弹跳向上退出','bounceOutUp'],
+		la_28	 :['	淡入进入	','	Fading Entrances	'],
+		la_29	 :['	淡入	','	fadeIn	'],
+		la_30	 :['	向下淡入	','	fadeInDown	'],
+		la_31	 :['	加强版向下淡入	','	fadeInDownBig	'],
+		la_32	 :['	向右淡入	','	fadeInLeft	'],
+		la_33	 :['	加强版向右淡入	','	fadeInLeftBig	'],
+		la_34	 :['	向左淡入	','	fadeInRight	'],
+		la_35	 :['	加强版向左淡入	','	fadeInRightBig	'],
+		la_36	 :['	向上淡入	','	fadeInUp	'],
+		la_37	 :['	加强版向上淡入	','	fadeInUpBig	'],
+		la_38	 :['	淡出退出	','	Fading Exits	'],
+		la_39	 :['	淡出	','	fadeOut	'],
+		la_40	 :['	向下淡出	','	fadeOutDown	'],
+		la_41	 :['	加强版向下淡出	','	fadeOutDownBig	'],
+		la_42	 :['	向左淡出	','	fadeOutLeft	'],
+		la_43	 :['	加强版向左淡出	','	fadeOutLeftBig	'],
+		la_44	 :['	向右淡出	','	fadeOutRight	'],
+		la_45	 :['	加强版向右淡出	','	fadeOutRightBig	'],
+		la_46	 :['	向上淡出	','	fadeOutUp	'],
+		la_47	 :['	加强版向上淡出	','	fadeOutUpBig	']
+	}
+	var thislang = '';
+         
+    /* language match */   
+    switch(bl)
+    {      
+        case "en":
+            /* english */
+            $('[data-lang]').each(function(){
+            	thislang = $(this).data('lang')
+            	$(this).text(eval('lang.' + thislang)[1]);
+            });
+            $('#langs').text('简体中文');
+            break;
+        case "zh":
+            /* 简体中文 */
+            $('[data-lang]').each(function(){
+            	thislang = $(this).data('lang');
+            	$(this).text(eval('lang.' + thislang)[0]);
+            });
+            $('#langs').text('English');
+            break;
+        default:
+            /* default no match */   
+    }   
+}
+
+function handleSwitchlang(){
+	if($('#langs').text() == 'English'){
+		switchlang('en')
+	}else{
+		switchlang('zh')
+	}
+}
+
+// 初始视图
+var zoomval = 1;
+
 // 分辨率
 var resX,resY,resTimes;
 
@@ -20,6 +121,10 @@ function resolution(){
 				resTimes = 2.6087;
 				break;
 			}
+			case 'device_ipx' : {
+				resTimes = 3;
+				break;
+			}
 		}
 		resX = Math.floor($('.m_stage .inner').width() * resTimes);
 		resY = Math.floor($('.m_stage .inner').height() * resTimes);
@@ -29,7 +134,7 @@ function resolution(){
 		resY = $('.m_stage').height();
 	}
 
-	$('#txtDesc').text('Resolution: ' + resX + '*' + resY + ', Pixel Density: ' + resTimes * 100 + '%');
+	$('#txtDesc').html('resolution: ' + resX + '*' + resY + ', <br /> pixel density: ' + resTimes * 100 + '%, <br />view ratio: <span class="j_zoom">' + zoomval * 100 + '%</span>');
 	bgBodySize(resTimes);
 	bgStageSize(resTimes);
 }
@@ -155,8 +260,17 @@ Array.prototype.insert = function(index,item){
 }
 
 //alert
-function txtAlert(txt){
-	$('#f_stage_alert .con').html(txt);
+function txtAlert(txtgroup){
+
+	if($('#langs').text() == 'English'){
+
+		$('#f_stage_alert .con').html(txtgroup[1]);
+
+	}else{
+
+		$('#f_stage_alert .con').html(txtgroup[0]);
+
+	}
 	$('#f_stage_alert').show();
     setTimeout(function(){
 	    $('#f_stage_alert').hide();
@@ -399,7 +513,7 @@ function aniInsertCss(){
 		for(var i=0;i<key_tl_num_base;i++){
 			keys[i] =  $('.key_lb:eq('+ i +') .key_pct').text();
 			if(keys[i] == key){
-				txtAlert('<span class="icon-warning"></span> 不能新建重复的关键帧！');
+				txtAlert(['<span class="icon-warning"></span> Cannot create duplicate keyframes!','<span class="icon-warning"></span> 不能新建重复的关键帧！']);
 				return false;
 			}
 		}
@@ -476,7 +590,7 @@ function aniInsertCss(){
 
 	}else{
 
-		txtAlert('<span class="icon-warning"></span> 请输入0-100之间的数字');
+		txtAlert(['<span class="icon-warning"></span> Please enter a number between 0-100','<span class="icon-warning"></span> 请输入0-100之间的数字']);
 	}
 }
 
@@ -508,12 +622,19 @@ function cssAddpro(){
 				$('#newVal').val('');
 				$('#f_emptypro').hide();
 			}else{
-				txtAlert('<span class="icon-warning"></span> 不能添加空属性！');
+				txtAlert(['<span class="icon-warning"></span> Cannot add properties without a value!','<span class="icon-warning"></span> 不能添加空属性！']);
 			}
 		}
 	}
 	if($('#keytb tr').length<2){
-		var helptxt = $('#keytb .inputTxt input').attr('title');
+
+		var helptxt = '';
+		if($('#langs').text() == 'English'){
+			helptxt = $('#keytb .inputTxt input').data('cntitle');
+		}else{
+			helptxt = $('#keytb .inputTxt input').data('entitle');
+		}
+
 		$('#keytb .inputTxt').append('<div class="helptxt c_t2"></div>');
 		$('#keytb .helptxt').html('<span class="vt_m icon-question mr5"></span><span class="vt_m">'+helptxt+'</span>');
 		setTimeout(function(){	
@@ -578,15 +699,22 @@ function control_q(obj){
 
 $(function(){
 
+	// 语言
+	checklang();
+
 	// 分辨率
 	resolution();
 
+	$('#langs').on('click',function(){
+		handleSwitchlang();
+	});
+
 	// 导航切换
-	$('.nav .item .txt').click(function(){
+	$('.nav .j_panel .txt').click(function(){
 
 		// panel显示
 		if(panelVis == 1){
-			txtAlert('<span class="icon-warning"></span> 点击图片，显示所有面板');
+			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
 			$('.SC').show();
 			panelVis = 0;
 		}
@@ -684,10 +812,10 @@ $(function(){
 				cssPrint(); // 输出css代码
 				playTL();
 			}else{
-				txtAlert('<span class="icon-warning"></span> 至少需要2个关键帧才能播放动画');
+				txtAlert(['<span class="icon-warning"></span> At least 2 keyframes are required to play the animation','<span class="icon-warning"></span> 至少需要2个关键帧才能播放动画']);
 			}	
 		}else{
-			txtAlert('<span class="icon-warning"></span> 请检查基本属性');
+			txtAlert(['<span class="icon-warning"></span> Please check the basic properties','<span class="icon-warning"></span> 请检查基本属性']);
 		}
 		$.SyntaxHighlighter.init();
 	});
@@ -867,7 +995,7 @@ $(function(){
 			currentStatus();
 			
 		}else{
-			txtAlert('<span class="icon-warning"></span> 不能删除0%的关键帧！')
+			txtAlert(['<span class="icon-warning"></span> Cannot delete 0% keyframe!','<span class="icon-warning"></span> 不能删除0%的关键帧！'])
 		}
 		return false;
 	});
@@ -910,12 +1038,25 @@ $(function(){
 	// 帮助
 	$('.inputHelp input,.inputHelp select,.inputHelp .inputVir').on('focus',function(){
 
-		var helptxt = $(this).attr('title');
+		var helptxt = '';
+		if($('#langs').text() == 'English'){
+			helptxt = $(this).data('cntitle');
+		}else{
+			helptxt = $(this).data('entitle');
+		}
 
 		$(this).after('<div class="helptxt c_t2"></div>');
 
 		if($(this).attr('id') == 'newVal'){
-			var units = $('#newPro option:selected').data('units');
+
+			var units = '';
+
+			if($('#langs').text() == 'English'){
+				units = $('#newPro option:selected').data('cnunits');
+			}else{
+				units = $('#newPro option:selected').data('enunits');
+			}
+
 			$(this).siblings('.helptxt').html('<span class="vt_m icon-question mr5"></span><span class="vt_m">'+units + helptxt+'</span>');
 
 		}else{
@@ -953,6 +1094,17 @@ $(function(){
 		resolution();
 	});
 
+	// 切换视图大小
+	function set_view(){
+		zoomval = $('#set_view').val() / 100;
+		$('.animationWrap').css('zoom',zoomval);
+		$('.j_zoom').text(Math.floor(zoomval * 100) + '%');
+		return zoomval;
+	}
+	$('#set_view').on('input',function(){
+		set_view(this);
+	});
+
 	// 复制
 	// zeroClipboard config
 	var $client = new ZeroClipboard($('.f_copy_btn'));
@@ -965,7 +1117,7 @@ $(function(){
 	    // `event.target` === the element that was clicked
 	    // event.target.style.display = "none";
 	    // alert("内容已复制: \r\n" + event.data["text/plain"] );
-	    txtAlert('<span class="icon-checkmark"></span> 复制代码成功！');
+	    txtAlert(['<span class="icon-checkmark"></span> Copy success!','<span class="icon-checkmark"></span> 复制代码成功！']);
 	  } );
 	} );
 
@@ -996,7 +1148,7 @@ $(function(){
 
 	// 拖拽提示
 	$('.m_stage').on('dragenter',function(){
-		txtAlert('<span class="icon-warning"></span> 拖拽到画布中以自定义图片，支持png, jpg, gif, bmp');
+		txtAlert(['<span class="icon-warning"></span> Drag and drop a custom picture to the canvas, support png, jpg, gif, bmp','<span class="icon-warning"></span> 拖拽到画布中以自定义图片，支持png, jpg, gif, bmp']);
 	});
 
 	// scroll
@@ -1025,11 +1177,11 @@ $(function(){
 function togglePanel(){
 	if(panelVis == 0){
 		$('.SC').hide();
-		txtAlert('<span class="icon-warning"></span> 点击图片，隐藏所有面板');
+		txtAlert(['<span class="icon-warning"></span> Click UFO to hide all panels','<span class="icon-warning"></span> 点击图片，隐藏所有面板']);
 		panelVis = 1;
 	}else{
 		$('.SC').show();
-		txtAlert('<span class="icon-warning"></span> 点击图片，显示所有面板');
+		txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
 		panelVis = 0;
 	}
 }
@@ -1058,7 +1210,7 @@ document.onkeydown=function(event){
   			$('#newPro').focus();
   			break;
   		}else if($('.getfocus').hasClass('f_copy_btn')){
-  			txtAlert('<span class="icon-warning"></span> 键盘操作不支持回车复制，请继续tab至代码处进行拷贝');
+  			txtAlert(['<span class="icon-warning"></span> Copy operation does not support a keyboard, please manually copy the code','<span class="icon-warning"></span> 键盘操作不支持回车复制，请继续tab至代码处进行拷贝']);
   			break;
   		}
   		$('.getfocus').trigger('click');
@@ -1067,11 +1219,11 @@ document.onkeydown=function(event){
   	case 27 : { // ESC
   		$('#aniStop button').trigger('click');
 		$('body').scrollTop(0);
-  		$('.logo .c1').focus();
+  		$('.logo .c3').focus();
 
 		// panel显示
 		if(panelVis == 1){
-			txtAlert('<span class="icon-warning"></span> 点击图片，显示所有面板');
+			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
 			$('.SC').show();
 			panelVis = 0;
 		}
