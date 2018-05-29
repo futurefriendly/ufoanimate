@@ -898,7 +898,7 @@ $(function(){
 		}
 	});
 	$('#aniCate3 .tagCloud .lk').click(function(){
-		$('#ajaxHtml').load('library/'+$(this).attr('title')+'.html #loadHtml',function(response, status, xhr){
+		$('#ajaxHtml').load('./demo/library/'+$(this).attr('title')+'.html #loadHtml',function(response, status, xhr){
 			$.SyntaxHighlighter.init();
 		});
 		$('#aniCate3 .item').removeClass('select');
