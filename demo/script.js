@@ -18,7 +18,7 @@ function switchlang(bl){
 		la_2 : ['常规飞行','Animate.css'],
 		la_3 : ['自定义飞行','Custom'],
 		la_4 : ['标准飞行','Animate.css'],
-		la_5 : ['CSS手册','CSS Manual (Chinese Only)'],
+		la_5 : ['CSS手册','CSS Manual (CHI)'],
 		la_6 : ['引起注意','Attention Seekers'],
 		la_7 : ['弹跳','bounce'],
 		la_8 : ['闪烁','flash'],
@@ -177,7 +177,8 @@ function switchlang(bl){
 		la_161 : ['回调函数(可选)','Callback function (optional)'],
 		la_162 : ['解锁编辑','Unlock'],
 		la_163 : ['锁定编辑','Lock'],
-		la_164 : ['恢复更改','Revert']
+		la_164 : ['恢复更改','Revert'],
+		la_165 : ['关于','About']
 	};
 	var thislang = '';
          
@@ -857,12 +858,15 @@ $(function(){
 				$('#aniCate3 .item:eq(0)').addClass('select');
 			}
 			$('#ajaxHtml').show();
-			$('#css_code,#css_use,.m_stage,#css_display').hide();
+			$('#css_code,#css_use,.m_stage,#css_display,#about').hide();
+		}else if(anict==4){
+			$('#ajaxHtml,#css_code,#css_use,.m_stage,#css_display').hide();
+			$('#about').show();
 		}else if(anict==1){
-			$('#ajaxHtml,#css_code').hide();
+			$('#ajaxHtml,#css_code,#about').hide();
 			$('#css_use,.m_stage,#css_display').show();
 		}else{
-			$('#ajaxHtml,#css_use').hide();
+			$('#ajaxHtml,#css_use,#about').hide();
 			$('#css_code,.m_stage,#css_display').show();
 			if(key_tl_num_base>1){
 				cssInsert();
