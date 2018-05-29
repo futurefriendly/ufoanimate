@@ -58,7 +58,7 @@
 
 /* 二级导航 */
 .topnav .topNavSub{ position:absolute;  width:125px;top:42px; right:0; display:none;}
-.topnav .topNavSub ul{border:1px solid #AFAFAF; border-radius:5px; overflow: hidden;background:#fff;}
+.topnav .topNavSub ul{border:1px solid #AFAFAF; border-radius:3px; overflow: hidden;background:#fff;}
 .topnav .topNavSub li{ height:33px; line-height:33px; text-align:center; border-bottom:1px solid #CBCBCB;*vertical-align:middle;}
 .topnav .topNavSub li:last-child{ border:0}
 .topnav .topNavSub li a{ color:#333; display:block; _zoom:1; font-size:14px}
@@ -154,7 +154,7 @@
 
 .tb_tag{ margin:0 auto;}
 
-.D_tagSub{ position:absolute; right:0; top:40px; width:300px; padding:10px 5px 5px 10px; background:#fff; border:#afafaf 1px solid; text-align:left; border-radius:5px}
+.D_tagSub{ position:absolute; right:0; top:40px; width:300px; padding:10px 5px 5px 10px; background:#fff; border:#afafaf 1px solid; text-align:left; border-radius:3px}
 .D_tagSub .item{ *display:inline; *zoom:1; margin:0 5px 5px 0;}
 .D_tagSub .item a{ *display:inline; *zoom:1; padding:0 8px; font-size:16px; font-family:Helvetica,Microsoft Yahei,sans-serif; color:#333; border-radius:3px; white-space:nowrap;}
 .D_tagSub .item a:hover{ background:#01adba; color:#fff; text-decoration:none}

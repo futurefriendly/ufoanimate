@@ -15,9 +15,9 @@ function switchlang(bl){
 
 	var lang = {
 		la_1 : ['UFO Animate','UFO Animate'],
-		la_2 : ['标准轨迹','Animate.css'],
-		la_3 : ['自定义轨迹','Custom'],
-		la_4 : ['标准轨迹','Animate.css'],
+		la_2 : ['常规飞行','Animate.css'],
+		la_3 : ['自定义飞行','Custom'],
+		la_4 : ['标准飞行','Animate.css'],
 		la_5 : ['CSS手册','CSS Manual (Chinese Only)'],
 		la_6 : ['引起注意','Attention Seekers'],
 		la_7 : ['弹跳','bounce'],
@@ -127,8 +127,8 @@ function switchlang(bl){
 		la_111 : ['减速','ease-out'],
 		la_112 : ['慢快慢','ease-in-out'],
 		la_113 : ['跳帧','steps'],
-		la_114 : ['跳帧数量','Steps Count'],
-		la_115 : ['帧','step(s)'],
+		la_114 : ['跳帧数量','Step Count'],
+		la_115 : ['帧','step or steps'],
 		la_116 : ['始终模式','Fill Mode'],
 		la_117 : ['不启用始终模式','none'],
 		la_118 : ['动画结束后以最终状态停止','forwards'],
@@ -175,9 +175,9 @@ function switchlang(bl){
 		la_159 : ['复制','Copy'],
 		la_160 : ['使用此动画','Use this animation'],
 		la_161 : ['回调函数(可选)','Callback function (optional)'],
-		la_162 : ['解锁编辑','Unlock Editing'],
-		la_163 : ['锁定编辑','Lock Editing'],
-		la_164 : ['恢复更改','Revert changes	']
+		la_162 : ['解锁编辑','Unlock'],
+		la_163 : ['锁定编辑','Lock'],
+		la_164 : ['恢复更改','Revert']
 	};
 	var thislang = '';
          
@@ -933,7 +933,7 @@ $(function(){
 				txtAlert(['<span class="icon-warning"></span> At least 2 keyframes are required to play the animation','<span class="icon-warning"></span> 至少需要2个关键帧才能播放动画']);
 			}	
 		}else{
-			txtAlert(['<span class="icon-warning"></span> Please check the basic properties','<span class="icon-warning"></span> 请检查基本属性']);
+			txtAlert(['<span class="icon-warning"></span> Please check the configuration','<span class="icon-warning"></span> 请检查基本配置']);
 		}
 		$.SyntaxHighlighter.init();
 	});
@@ -983,9 +983,20 @@ $(function(){
 						if(!objReg.test(objStr)){
 							$p.addClass('inputCur');
 							if(objStr == ''){
-								$p.after('<div class="mt5 c_t2 f_ins">上面的文本框不能为空</div>');
+
+								if($('#langs').text() == 'English'){
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">上面的文本框不能为空</div>');
+								}else{
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">The input box above cannot be empty</div>');
+								}
+								
 							}else{
-								$p.after('<div class="mt5 c_t2 f_ins">请输入数字，支持小数点</div>');
+
+								if($('#langs').text() == 'English'){
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">请输入数字，支持小数点</div>');
+								}else{
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">Please enter a number, decimal point was supported</div>');
+								}
 							}
 						}
 					}

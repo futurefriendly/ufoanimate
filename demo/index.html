@@ -349,7 +349,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<th data-lang="la_98">Flight Duration</th>
 									<td>
 										<div class="key_common inputVali inputHelp" data-role="animation-duration" data-units="s">
-											<div class="inputTxt" style="width:70%">
+											<div class="inputTxt" style="width:30%">
 												<input tabindex="0" id="ani_initTime" class="key_val" type="text" data-type="float" placeholder="0" value="1" maxlength="3" data-cntitle="动画播放时长" data-entitle="Defining animation-duration" />
 											</div>
 											<span class="units" data-lang="la_100">s</span>
@@ -360,7 +360,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<th data-lang="la_99">Delay</th>
 									<td>
 										<div class="key_common inputVali inputHelp" data-role="animation-delay" data-units="s">
-											<div class="inputTxt" style="width:70%">
+											<div class="inputTxt" style="width:30%">
 												<input tabindex="0" id="ani_initDelay" class="key_val" type="text" data-type="float" placeholder="0" value="0" maxlength="3" data-cntitle="动画开始前的预备时间" data-entitle="Defining animation-delay" />
 											</div>
 											<span class="units" data-lang="la_100">s</span>
@@ -371,8 +371,8 @@ window.addEventListener('DOMContentLoaded', function() {
 									<th data-lang="la_101">Flight Times</th>
 									<td>
 										<div class="key_common inputVali inputHelp" data-role="animation-iteration-count" data-units="">
-											<div class="inputTxt" style="width:70%">
-												<input tabindex="0" id="ani_initCount" class="key_val" type="text" data-type="number" placeholder="0" value="1" maxlength="10" data-cntitle="动画播放次数，infinite为无限循环" data-entitle="Defining animation-iteration-count" />
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initCount" class="key_val" type="text" data-type="number" placeholder="0" value="1" maxlength="3" data-cntitle="动画播放次数，infinite为无限循环" data-entitle="Defining animation-iteration-count" />
 											</div>
 											<div class="mt5">
 												<span class="btn btn3 e_btn_s e_btn_inb">
@@ -418,13 +418,13 @@ window.addEventListener('DOMContentLoaded', function() {
 									</td>
 								</tr>
 								<tr id="ani_initTimingfunction2" style=" display:none;">
-									<th data-lang="la_114">Steps Count</th>
+									<th data-lang="la_114">Step Count</th>
 									<td>
 										<div class="inputVali inputHelp">
 											<div class="inputTxt" style="width:30%;">
 												<input tabindex="0" class="key_val" type="text" data-type="number" placeholder="Steps Count" value="1" maxlength="3" data-cntitle="将时间轴等分为若干区间，以划分区间的端点为关键帧进行逐帧播放" data-entitle="Defining steps of timing-function" />
 											</div>
-											<span class="units" data-lang="la_115">step(s)</span>
+											<span class="units" data-lang="la_115">step or steps</span>
 										</div>
 									</td>
 								</tr>
@@ -849,9 +849,9 @@ window.addEventListener('DOMContentLoaded', function() {
 									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">CSS</span></strong></h2>
 									<div class="opt">
 										<span class="btn btn3 e_btn_s e_btn_inb">
-											<button tabindex="0" id="unlockedit" class="btn btn1" title="点击解锁编辑"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m" data-lang="la_162">Unlock Editing</span></button>
-											<button tabindex="0" id="lockedit" class="btn btn1" title="点击锁定" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m" data-lang="la_163">Lock Editing</span></button>
-											<button tabindex="0" class="btn btn1" title="点击恢复配置动画" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m" data-lang="la_164">Revert changes</span></button>
+											<button tabindex="0" id="unlockedit" class="btn btn1" title="点击解锁编辑"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m" data-lang="la_162">Unlock</span></button>
+											<button tabindex="0" id="lockedit" class="btn btn1" title="点击锁定" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m" data-lang="la_163">Lock</span></button>
+											<button tabindex="0" class="btn btn1" title="点击恢复配置动画" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m" data-lang="la_164">Revert</span></button>
 											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="codePreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
 										</span>
 									</div>
