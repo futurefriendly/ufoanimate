@@ -1011,10 +1011,20 @@ $(function(){
 					if($p.siblings('.f_ins').length == 0){
 						if(!objReg.test(objStr)){
 							$p.addClass('inputCur');
-							$p.after('<div class="mt5 c_t2 f_ins">请输入整数</div>');
+
+							if($('#langs').text() == 'English'){
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">请输入整数</div>');
+							}else{
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">Please enter an integer</div>');
+							}
 						}else if(objStr == ''){
 							$p.addClass('inputCur');
-							$p.after('<div class="mt5 c_t2 f_ins">上面的文本框不能为空</div>');
+
+							if($('#langs').text() == 'English'){
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">上面的文本框不能为空</div>');
+							}else{
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">The input box above cannot be empty</div>');
+							}
 						}
 					}
 					break;
@@ -1025,9 +1035,19 @@ $(function(){
 						if(!objReg.test(objStr)){
 							$p.addClass('inputCur');
 							if(objStr == ''){
-								$p.after('<div class="mt5 c_t2 f_ins">上面的文本框不能为空</div>');
+
+								if($('#langs').text() == 'English'){
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">上面的文本框不能为空</div>');
+								}else{
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">The input box above cannot be empty</div>');
+								}
 							}else{
-								$p.after('<div class="mt5 c_t2 f_ins">支持英文、数字和下划线，必须以英文字母开头</div>');
+
+								if($('#langs').text() == 'English'){
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">支持英文、数字和下划线，必须以英文字母开头</div>');
+								}else{
+									$p.after('<div class="mt5 tx_12 c_t2 f_ins">letters, numbers, and underscores are supported, must begin with a letter</div>');
+								}
 							}
 						}
 					}
@@ -1037,7 +1057,11 @@ $(function(){
 					if(objStr == ''){
 						if($p.siblings('.f_ins').length == 0){
 							$p.addClass('inputCur');
-							$p.after('<div class="mt5 c_t2 f_ins">上面的文本框不能为空</div>');
+							if($('#langs').text() == 'English'){
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">上面的文本框不能为空</div>');
+							}else{
+								$p.after('<div class="mt5 tx_12 c_t2 f_ins">The input box above cannot be empty</div>');
+							}
 						}
 					}
 					break;
