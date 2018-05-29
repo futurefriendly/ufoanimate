@@ -277,8 +277,8 @@ aside{ position:relative; z-index:1; float:left; width:400px;}
 .SC_bd{ padding:0 20px 20px;}
 
 .mod_detail{ padding:20px; font-family:Microsoft Yahei; background-color:#535353; border-radius:10px}
-.mod_detail h1{padding:5px 10px;border-bottom:2px solid #fdab2b;font-size:24px;font-weight:normal;}
-.mod_article h2{font-size:16px;padding:10px 10px 0}
+.mod_detail h1{padding:5px 0;border-bottom:2px solid #fdab2b;font-size:24px;font-weight:normal;}
+.mod_article h2{font-size:16px;padding:10px 0 0}
 .mod_article .code{padding:10px 0}
 .mod_article .code pre{line-height:16px}
 .mod_table{padding:10px 0}
