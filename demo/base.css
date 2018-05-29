@@ -287,7 +287,6 @@ body .bor0{ border:none!important}
 .inputTxt input:focus,
 .inputTxt textarea:focus,
 .inputTxt select:focus{ background-color:#111; border-color:#fdab2b}
-.inputRange input[type=range]:focus::-webkit-slider-thumb{ background-color:#fdab2b}
 .inputCur input,
 .inputCur textarea,
 .inputCur select{ border-color:#ff8903}
@@ -359,6 +358,10 @@ body .bor0{ border:none!important}
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
+.inputRange input[type=range]:focus::-webkit-slider-thumb,
+.inputRange input[type=range]:focus::-moz-range-thumb,
+.inputRange input[type=range]:focus::-ms-thumb,
+.inputRange input[type=range]:focus::slider-thumb{ background-color:#fdab2b}
 
 /* 下拉框
 ----------------------------------------------------------------*/
