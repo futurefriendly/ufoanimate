@@ -269,10 +269,10 @@ aside{ position:relative; z-index:1; float:left; width:400px;}
 /* SC sideContent结构
 ----------------------------------------------------------------*/
 
-.SC{ margin-bottom:10px; border-bottom:#111 1px solid; background-color:rgba(83,83,83,.9);}
+.SC{ margin-bottom:10px; border-bottom:#111 1px solid; background-color:rgba(83,83,83,.9); border-radius:10px}
 .SC_hd{ padding:10px 20px;}
 .SC_hd .tit{ float:left;}
-.SC_hd .tit_tx{ font-size:18px; font-weight:normal; font-family:Helvetica,Microsoft Yahei,sans-serif}
+.SC_hd .tit_tx{ font-size:18px; font-weight:normal; font-family:Helvetica,Microsoft Yahei,sans-serif;}
 .SC_hd .opt{ float:right; padding-top:5px; font-family:Helvetica,Microsoft Yahei,sans-serif}
 .SC_bd{ padding:0 20px 20px;}
 
@@ -316,7 +316,7 @@ pre.prettyprint{ margin-bottom:20px; border-color:#666!important; background-col
 body .prettyprint.theme-balupton .pln{ color:#ddd}
 body .prettyprint ol.linenums li{ border-left-color:#fdab2b;}
 
-.m_eassy{ min-height:500px; background:#535353 url(http://mat1.gtimg.com/www/mb/images/mv/loading_l.GIF) center center no-repeat; background-size:30px 30px;}
+.m_eassy{ min-height:500px; background:#535353 url(./images/loading.gif) center center no-repeat; background-size:32px 32px;}
 
 pre{ display:none;margin-bottom:0!important;word-wrap:break-word;}
 
