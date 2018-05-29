@@ -329,32 +329,22 @@ body .bor0{ border:none!important}
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
-.inputRange input[type=range]::-moz-slider-runnable-track {
+.inputRange input[type=range]::-moz-range-track {
   -webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
-.inputRange input[type=range]::-moz-slider-thumb {
+.inputRange input[type=range]::-moz-range-thumb {
   -webkit-appearance: none; background:#333;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
-.inputRange input[type=range]::-o-slider-runnable-track {
+.inputRange input[type=range]::-ms-track {
   -webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
-.inputRange input[type=range]::-o-slider-thumb {
-  -webkit-appearance: none; background:#333;
-	width:20px; height:20px; margin-top:-9px; border-radius:3px;
-
-}
-.inputRange input[type=range]::-ms-slider-runnable-track {
-  -webkit-appearance: none;
-	background:#333;
-	height:2px;
-}
-.inputRange input[type=range]::-ms-slider-thumb {
+.inputRange input[type=range]::-ms-thumb {
   -webkit-appearance: none; background:#333;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
