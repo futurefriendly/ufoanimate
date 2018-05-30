@@ -207,7 +207,7 @@ body .bor0{ border:none!important}
 /* 分隔线
 ----------------------------------------------------------------*/
 
-.hr1{ height:0; font-size:0; border:0; border-bottom:#333 1px solid;}
+.hr1{ height:0; font-size:0; margin-left:-20px; margin-right:-20px; border:0; border-bottom:#333 1px solid;}
 
 /* 其他
 ----------------------------------------------------------------*/
