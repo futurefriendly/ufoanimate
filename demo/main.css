@@ -279,16 +279,16 @@ aside{ position:relative; z-index:1; float:left; width:400px;}
 .mod_detail{ padding:20px; font-family:Helvetica,Arial,Microsoft Yahei,sans-serif; background-color:#535353; border-radius:10px}
 .mod_detail h1{padding:5px 0;border-bottom:2px solid #fdab2b;font-size:24px;font-weight:normal;}
 .mod_article h2{font-size:16px;padding:10px 0 0}
-.mod_article .code{padding:10px 0; font-family:Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace}
+.mod_article .code{padding:10px 0; font-family:Consolas,'Bitstream Vera Sans Mono','Courier New',Courier,monospace; font-size:12px}
 .mod_article .code pre{line-height:16px}
 .mod_table{padding:10px 0}
-.mod_table table{border:1px solid #666;width:100%; background-color:#333}
+.mod_table table{border:1px solid #666;width:100%; background-color:#333; font-size:12px}
 .mod_table td{border:1px solid #666;padding:5px 10px}
 .mod_table th{border:1px solid #666;padding:5px 10px;background:#111;font-weight:bold;text-align:left;}
 .mod_table .center th, .mod_table .center td{text-align:center}
 .mod_article .code .code_box{background:#111;display:block;border:1px solid #666}
 .mod_article .code .code_box .code_css,.mod_article .code .code_box .code_value{padding:10px;display:block;line-height:24px}
-.mod_article .intro{margin:10px 0;background:#333;padding:7px 0;font-size:14px;border:1px solid #666}
+.mod_article .intro{margin:10px 0;background:#333;padding:7px 0;font-size:12px;border:1px solid #666}
 .mod_article .intro p{padding:3px 10px}
 .code_textarea{ display:none}
 pre.prettyprint{ margin-bottom:20px; border-color:#666!important; background-color:#111}
