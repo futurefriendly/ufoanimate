@@ -18,7 +18,7 @@ function switchlang(bl){
 		la_2 : ['常规飞行','Animate.css'],
 		la_3 : ['自定义飞行','Custom'],
 		la_4 : ['标准飞行','Animate.css'],
-		la_5 : ['CSS手册','CSS Manual (Chinese)'],
+		la_5 : ['CSS手册','CSS Manual (Chinese Only)'],
 		la_6 : ['引起注意','Attention Seekers'],
 		la_7 : ['弹跳','bounce'],
 		la_8 : ['闪烁','flash'],
