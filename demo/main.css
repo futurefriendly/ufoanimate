@@ -48,7 +48,7 @@
 .topnav .nav .dot{ display:none}
 .topnav .nav .item{ position:relative; height:42px; margin-right:3px;}
 .topnav .right .item{ margin-left:3px; margin-right:0}
-.topnav .nav .item .txt{ display:inline-block; *display:inline; *zoom:1; line-height:1.75em; padding:9px 20px 0; height:33px; font-size:14px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,Simsun,sans-serif; color:#fff; cursor:pointer; text-transform:uppercase;}
+.topnav .nav .item .txt{ display:inline-block; *display:inline; *zoom:1; line-height:1.75em; padding:9px 15px 0; height:33px; font-size:14px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,Simsun,sans-serif; color:#fff; cursor:pointer; text-transform:uppercase;}
 .topnav .nav .item:hover .txt,
 .topnav .nav .item .txt:hover,
 .topnav .nav .item .txt:focus,
