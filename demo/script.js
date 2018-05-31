@@ -721,7 +721,7 @@ function aniInsertCss(){
 
 	}else{
 
-		txtAlert(['<span class="icon-warning"></span> Please enter a number between 0-100','<span class="icon-warning"></span> 请输入0-100之间的数字']);
+		txtAlert(['<span class="icon-warning"></span> Please enter a number between 0-100.','<span class="icon-warning"></span> 请输入0-100之间的数字。']);
 	}
 }
 
@@ -846,7 +846,7 @@ $(function(){
 
 		// panel显示
 		if(panelVis == 1){
-			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
+			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels.','<span class="icon-warning"></span> 点击图片，显示所有面板。']);
 			$('.SC').show();
 			panelVis = 0;
 		}
@@ -947,10 +947,10 @@ $(function(){
 				cssPrint(); // 输出css代码
 				playTL();
 			}else{
-				txtAlert(['<span class="icon-warning"></span> At least 2 keyframes are required to play the animation','<span class="icon-warning"></span> 至少需要2个关键帧才能播放动画']);
+				txtAlert(['<span class="icon-warning"></span> At least 2 keyframes are required to play the animation.','<span class="icon-warning"></span> 至少需要2个关键帧才能播放动画。']);
 			}	
 		}else{
-			txtAlert(['<span class="icon-warning"></span> Please check the configuration','<span class="icon-warning"></span> 请检查基本配置']);
+			txtAlert(['<span class="icon-warning"></span> Please check the configuration.','<span class="icon-warning"></span> 请检查基本配置。']);
 		}
 		$.SyntaxHighlighter.init();
 	});
@@ -1318,7 +1318,7 @@ $(function(){
 
 	// 拖拽提示
 	$('.m_stage').on('dragenter',function(){
-		txtAlert(['<span class="icon-warning"></span> Drag and drop a custom picture to the canvas, support png, jpg, gif, bmp','<span class="icon-warning"></span> 拖拽到画布中以自定义图片，支持png, jpg, gif, bmp']);
+		txtAlert(['<span class="icon-warning"></span> Drag and drop a custom picture to the canvas, support png, jpg, gif, bmp.','<span class="icon-warning"></span> 拖拽到画布中以自定义图片，支持png, jpg, gif, bmp。']);
 	});
 
 	// scroll
@@ -1347,11 +1347,11 @@ $(function(){
 function togglePanel(){
 	if(panelVis == 0){
 		$('.SC').hide();
-		txtAlert(['<span class="icon-warning"></span> Click UFO to hide all panels','<span class="icon-warning"></span> 点击图片，隐藏所有面板']);
+		txtAlert(['<span class="icon-warning"></span> Click UFO to hide all panels.','<span class="icon-warning"></span> 点击图片，隐藏所有面板。']);
 		panelVis = 1;
 	}else{
 		$('.SC').show();
-		txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
+		txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels.','<span class="icon-warning"></span> 点击图片，显示所有面板。']);
 		panelVis = 0;
 	}
 }
@@ -1380,7 +1380,7 @@ document.onkeydown=function(event){
   			$('#newPro').focus();
   			break;
   		}else if($('.getfocus').hasClass('f_copy_btn')){
-  			txtAlert(['<span class="icon-warning"></span> Copy operation does not support a keyboard, please manually copy the code','<span class="icon-warning"></span> 键盘操作不支持回车复制，请继续tab至代码处进行拷贝']);
+  			txtAlert(['<span class="icon-warning"></span> Copy operation does not support a keyboard, please manually copy the code.','<span class="icon-warning"></span> 键盘操作不支持回车复制，请继续tab至代码处进行拷贝。']);
   			break;
   		}
   		$('.getfocus').trigger('click');
@@ -1393,7 +1393,7 @@ document.onkeydown=function(event){
 
 		// panel显示
 		if(panelVis == 1){
-			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels','<span class="icon-warning"></span> 点击图片，显示所有面板']);
+			txtAlert(['<span class="icon-warning"></span> Click UFO to show all panels.','<span class="icon-warning"></span> 点击图片，显示所有面板。']);
 			$('.SC').show();
 			panelVis = 0;
 		}
