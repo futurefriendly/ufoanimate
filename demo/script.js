@@ -799,7 +799,7 @@ function ani_direction(){
 	}
 }
 
-// 切换变形原点
+// 切换注册点
 function control_q(obj){
 
 	$('.animationWrap .pos').show();
