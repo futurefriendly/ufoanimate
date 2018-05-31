@@ -185,7 +185,7 @@ function switchlang(bl){
 		la_169 : ['本地化更新，同时支持英文和简体中文。','Localization work in both English and Chinese.'],
 		la_170 : ['版权声明：','Copyright notice:'],
 		la_171 : ['许可：','License:'],
-		la_172 : ['设计师卖瓜','Designer\'s Advertising'],
+		la_172 : ['设计师卖瓜','Designer\'s Book'],
 		la_173 : ['《渐进增强：跨平台用户体验设计》','"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement" (Chinese Version)'],
 		la_174 : ['作者：Aaron Gustafson；译者：翟东方，任洁','Author: Aaron Gustafson; Translator: Benny C., Elsa R.'],
 		la_175 : ['如果你想开发一个既优雅又好用的网站，仅仅知道如何编写代码是远远不够的。本书介绍了一种名为渐进增强的设计思想，只要将这种它运用在项目中，就能使网站的兼容性、适应性和可访问性得到极大改善。本书的独特之处在于，作者站在一个宏观的视角，考察了Web 设计流程的各个环节，将内容组织、UX 设计、UI 开发、响应式设计、前端开发、服务端开发、性能优化，以及种种对用户产生影响的因素联系在一起进行分析，以得出优化方案。——京东','Building an elegant, functional website requires more than just knowing how to code. In Adaptive Web Design, Second Edition, you’ll learn how to use progressive enhancement to build websites that work anywhere, won’t break, are accessible by anyone—on any device—and are designed to work well into the future. --Amazon'],
