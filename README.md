@@ -1,4 +1,4 @@
-# UFO Animate, by Benny Chak
+# UFO Animate, by [Benny Chak](https://www.linkedin.com/in/bennychak)
 
 UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Not only is it a tool, the designer wants to make it fun. This system has been optimized for accessibility. English and Chinese language are supported.
 
