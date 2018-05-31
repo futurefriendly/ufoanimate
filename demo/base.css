@@ -129,11 +129,11 @@ body .pl0{ padding-left:0!important}
 
 /* 字体 */
 .tx_song{font-family:SimSun,Helvetica}
-.tx_yh{font-family:Helvetica,Microsoft Yahei,Helvetica,sans-serif}
+.tx_yh{font-family:Helvetica,Microsoft Yahei,sans-serif}
 .tx_ar{ font-family:Arial}
 .tx_ss{ font-family:sans-serif}
 .tx_code{ font-family:Courier New}
-.tx_osw{ font-family:oswald,sans-serif}
+.tx_osw{ font-family:oswald,Helvetica,Microsoft Yahei,sans-serif}
 
 @font-face {
     font-family: 'oswald';
