@@ -291,7 +291,7 @@ aside{ position:relative; z-index:1; float:left; width:400px;}
 	display:-ms-box;
 	display:box;
 }
-.animationWrap .inner .bd{ position:relative; vertical-align:top;
+.animationWrap .inner .bd{ position:relative; vertical-align:top; margin:0 auto;
 	display:-webkit-box;
 	display:-moz-box;
 	display:-o-box;
