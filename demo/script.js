@@ -109,17 +109,17 @@ function switchlang(bl){
 		la_93 : ['向右缩小退出','zoomOutRight'],
 		la_94 : ['向上缩小退出','zoomOutUp'],
 		la_95 : ['基本配置','Configuration'],
-		la_96 : ['飞碟名称','UFO Name'],
+		la_96 : ['UFO名称','UFO Name'],
 		la_97 : ['航线名称','Airline Name'],
-		la_98 : ['飞行时间','Flight Duration'],
+		la_98 : ['飞行时长','Flight Duration'],
 		la_99 : ['起飞前延误','Delay'],
 		la_100 : ['秒','s'],
 		la_101 : ['飞行次数','Flight Times'],
 		la_102 : ['无限循环','infinite'],
 		la_103 : ['播放1次','flight once'],
 		la_104 : ['往返飞行','Direction'],
-		la_105 : ['单方向飞行','normal'],
-		la_106 : ['往返方向飞行','alternate'],
+		la_105 : ['单向飞行','normal'],
+		la_106 : ['往返飞行','alternate'],
 		la_107 : ['加速度','Acceleration'],
 		la_108 : ['匀速','linear'],
 		la_109 : ['渐慢','ease'],
@@ -170,7 +170,7 @@ function switchlang(bl){
 		la_154 : ['栅格','Grids'],
 		la_155 : ['太空','Space'],
 		la_156 : ['选择UFO','Select UFO'],
-		la_157 : ['自定义飞碟图片','Custom UFO picture'],
+		la_157 : ['自定义UFO图片','Custom UFO picture'],
 		la_158 : ['引入文件','Import Files'],
 		la_159 : ['复制','Copy'],
 		la_160 : ['使用此动画','Use this animation'],
@@ -265,7 +265,7 @@ function resolution(){
 		resY = $('.m_stage').height();
 	}
 
-	$('#txtDesc').html('resolution: ' + resX + '*' + resY + ', <br /> pixel density: ' + resTimes * 100 + '%, <br />view ratio: <span class="j_zoom">' + zoomval * 100 + '%</span>');
+	$('#txtDesc').html('Current Resolution: ' + resX + '*' + resY + ', Pixel Density: ' + resTimes * 100 + '%, View Ratio: <span class="j_zoom">' + zoomval * 100 + '%</span>');
 	bgBodySize(resTimes);
 	bgStageSize(resTimes);
 }
@@ -1267,7 +1267,7 @@ $(function(){
 	// 切换视图大小
 	function set_view(){
 		zoomval = $('#set_view').val() / 100;
-		$('.animationWrap').css('zoom',zoomval);
+		$('.animationWrap').css('transform', 'scale(' + zoomval + ')');
 		$('.j_zoom').text(Math.floor(zoomval * 100) + '%');
 		return zoomval;
 	}

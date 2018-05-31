@@ -460,7 +460,7 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 .e_btn_s a:hover,
 .e_btn_s a:active,
 .e_btn_s input,
-.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:oswald,Helvetica,Arial,sans-serif}
+.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:Helvetica,Arial,Microsoft Yahei,sans-serif}
 
 .btn input[disabled="disabled"],
 .btn button[disabled="disabled"]{ background:#3a4148; border:#3a4148 1px solid; cursor:not-allowed;}

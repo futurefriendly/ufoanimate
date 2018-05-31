@@ -342,7 +342,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<td>
 										<div class="key_common inputVali inputHelp" data-role="animation-name" data-units="">
 											<div class="inputTxt" style="width:70%">
-												<input tabindex="0" id="ani_initName" class="key_val" type="text" data-type="string" placeholder="airline name" value="airline-1" maxlength="10" data-cntitle="在css代码中的名字，不能为空" data-entitle="Defining the name of CSS selector, cannot be empty" />
+												<input tabindex="0" id="ani_initName" class="key_val" type="text" data-type="string" placeholder="airline name" value="airline-1" maxlength="10" data-cntitle="定义CSS代码选择器名称" data-entitle="Defining the name of CSS selector" />
 											</div>
 										</div>
 									</td>
@@ -392,7 +392,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<td>
 										<div class="key_common inputHelp" data-role="animation-direction" data-units="">
 											<div class="inputTxt" style="width:70%">
-												<select tabindex="0" id="ani_initDirection" class="key_val" disabled="disabled" data-cntitle="定义是否应该轮流反向播放动画，如选择偶次播放倒带，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）向后播放" data-entitle="Defining animation-direction. If you select “alternate”, the animation will play normally at odd times (1, 3, 5, etc.) and play reversely at even times (2, 4, 6, and so on).">
+												<select tabindex="0" id="ani_initDirection" class="key_val" disabled="disabled" data-cntitle="定义是否允许在偶次执行动画时进行反向播放，如选择往返飞行，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）反向播放" data-entitle="Defining animation-direction. If you select “alternate”, the animation will play normally at odd times (1, 3, 5, etc.) and play reversely at even times (2, 4, 6, and so on).">
 													<option value="normal" data-lang="la_105">normal</option>
 													<option value="alternate" data-lang="la_106">alternate</option>
 												</select>
@@ -705,10 +705,9 @@ window.addEventListener('DOMContentLoaded', function() {
 								<div class="pos" style="display:none"></div>
 							</div>
 						</div>
-						<div class="foot">
-							<div class="txtDesc tx_12 c_t2"><span class="bd"><span class="res"><span id="txtDesc" class="vt_m"></span></span></span></div>
-						</div>
+						<div class="foot"></div>
 					</div>
+					<div class="txtDesc tx_12 c_t2"><span class="bd"><span class="res"><span id="txtDesc" class="vt_m tx_osw"></span></span></span></div>
 				</div>
 				<div class="m_property">
 					<div id="css_display">
@@ -744,7 +743,7 @@ window.addEventListener('DOMContentLoaded', function() {
 												<td>
 													<div>
 														<div class="inputRange" style="width:70%">
-															<input id="set_view" type="range" min="40" max="100" step="20" value="100" />
+															<input id="set_view" type="range" min="25" max="100" step="25" value="100" />
 															<i class="arr"></i>
 														</div>
 													</div>
@@ -804,7 +803,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m" data-lang="la_158">Import files</span></strong></h2>
 									<div class="opt">
 										<span class="btn btn3 e_btn_s e_btn_inb">
-											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="importAniCss" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="importAniCss" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
 										</span>
 									</div>
 								</div>
@@ -817,7 +816,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m" data-lang="la_160">Use this animation</span></strong></h2>
 									<div class="opt">
 										<span class="btn btn3 e_btn_s e_btn_inb">
-											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="animatecssPreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="animatecssPreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
 										</span>
 									</div>
 								</div>
@@ -830,7 +829,7 @@ window.addEventListener('DOMContentLoaded', function() {
 									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m" data-lang="la_161">Callback function (optional)</span></strong></h2>
 									<div class="opt">
 										<span class="btn btn3 e_btn_s e_btn_inb">
-											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="f_ani_callback" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="f_ani_callback" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
 										</span>
 									</div>
 								</div>
@@ -851,10 +850,10 @@ window.addEventListener('DOMContentLoaded', function() {
 									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">CSS</span></strong></h2>
 									<div class="opt">
 										<span class="btn btn3 e_btn_s e_btn_inb">
-											<button tabindex="0" id="unlockedit" class="btn btn1" title="点击解锁编辑"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m" data-lang="la_162">Unlock</span></button>
-											<button tabindex="0" id="lockedit" class="btn btn1" title="点击锁定" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m" data-lang="la_163">Lock</span></button>
-											<button tabindex="0" class="btn btn1" title="点击恢复配置动画" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m" data-lang="la_164">Revert</span></button>
-											<button tabindex="0" class="btn btn1 f_copy_btn" title="点击复制" data-clipboard-target="codePreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+											<button tabindex="0" id="unlockedit" class="btn btn1"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m" data-lang="la_162">Unlock</span></button>
+											<button tabindex="0" id="lockedit" class="btn btn1" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m" data-lang="la_163">Lock</span></button>
+											<button tabindex="0" class="btn btn1" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m" data-lang="la_164">Revert</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="codePreview" data-clipboard-text="Default clipboard text from attribute"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
 										</span>
 									</div>
 								</div>
