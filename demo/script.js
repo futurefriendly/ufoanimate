@@ -405,7 +405,7 @@ function txtAlert(txtgroup){
 	$('#f_stage_alert').show();
     setTimeout(function(){
 	    $('#f_stage_alert').hide();
-    },2000);
+    },5000);
     return false;
 }
 
