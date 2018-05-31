@@ -325,48 +325,48 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 	transform:rotate(-45deg);
 }
 .inputRange input{ width:100%;
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 .inputRange input[type=range]::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
 .inputRange input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none; background:#333;
+	-webkit-appearance: none; background:#333;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
 .inputRange input[type=range]::-moz-range-track {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
 .inputRange input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none; background:#333;
+	-webkit-appearance: none; background:#333; border:none;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
 .inputRange input[type=range]::-ms-track {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
 .inputRange input[type=range]::-ms-thumb {
-  -webkit-appearance: none; background:#333;
+	-webkit-appearance: none; background:#333;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
 
 }
 .inputRange input[type=range]::slider-runnable-track {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 	background:#333;
 	height:2px;
 }
 .inputRange input[type=range]::slider-thumb {
-  -webkit-appearance: none; background:#333;
+	-webkit-appearance: none; background:#333;
 	width:20px; height:20px; margin-top:-9px; border-radius:3px;
-
 }
+.inputRange input[type=range]:-moz-focusring{}
 .inputRange input[type=range]:focus::-webkit-slider-thumb,
 .inputRange input[type=range]:focus::-moz-range-thumb,
 .inputRange input[type=range]:focus::-ms-thumb,
