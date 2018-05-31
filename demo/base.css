@@ -505,6 +505,9 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 .btn_jd:visited{ background:#df3033; color:#fff; border-color:#df3033; border-radius:0; box-shadow:none}
 .btn_jd:hover{ opacity:.9 }
 
+.btn_donate img{ width:150px}
+.btn_donate:hover{ opacity:.9 }
+
 /* 关闭
 ----------------------------------------------------------------*/
 

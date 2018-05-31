@@ -191,7 +191,9 @@ function switchlang(bl){
 		la_175 : ['如果你想开发一个既优雅又好用的网站，仅仅知道如何编写代码是远远不够的。本书介绍了一种名为渐进增强的设计思想，只要将这种它运用在项目中，就能使网站的兼容性、适应性和可访问性得到极大改善。本书的独特之处在于，作者站在一个宏观的视角，考察了Web 设计流程的各个环节，将内容组织、UX 设计、UI 开发、响应式设计、前端开发、服务端开发、性能优化，以及种种对用户产生影响的因素联系在一起进行分析，以得出优化方案。——京东','Building an elegant, functional website requires more than just knowing how to code. In Adaptive Web Design, Second Edition, you’ll learn how to use progressive enhancement to build websites that work anywhere, won’t break, are accessible by anyone—on any device—and are designed to work well into the future. --Amazon'],
 		la_176 : ['大众一再把注意力集中在熟练使用框架和第三方代码上，往往忽略了最基本的编程原理，甚至有一段时间WebKit 险些成为另一个IE6。本书所阐述的“渐进增强、平稳退化”正是近年来最缺少的声音。Web 从设计之初就希望可以供所有人使用，本书将会教授你对于不同的人、客户端，如何采用增强和退化的方法。难能可贵的是，Gustafson 还利用交互和视觉的相关经验去帮助你了解如何使技术和理念落地，让你的Web 具有更高的适应性。感谢东方兄弟将此书翻译出来与同行分享。——温和(腾讯技术公益信息无障碍技术顾问、腾讯云平台用户体验设计负责人)','I remember well when I got my hands on a copy of the first edition of Adaptive Web Design. I knew it would be good, but I didn’t expect to be quite so blown away after just one chapter. In that first chapter, Aaron managed to perfectly crystallize what I had been struggling to articulate for years on the true meaning of progressive enhancement. --Jeremy Keith'],
 		la_177 : ['去亚马逊购买','Buy from Amazon'],
-		la_178 : ['去京东购买','Buy from JD.com']
+		la_178 : ['去京东购买','Buy from JD.com'],
+		la_179 : ['支持设计师','Donate to designer'],
+		la_180 : ['请点击下面的按钮赞助本网站，您的鼓励对我们很重要！','Thanks You for donating this site, we need your encouragement!']
 	};
 	var thislang = '';
          
