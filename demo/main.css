@@ -363,7 +363,7 @@ body .prettyprint ol.linenums li{ border-left-color:#fdab2b;}
 .m_essay{ min-height:500px; background-color:#535353; border-radius:10px}
 .e_essay_ajax{ background-image:url(./images/loading.gif); background-position:center; background-repeat:no-repeat; background-size:32px 32px;}
 .e_essay_blank{ margin-left:-10px}
-.m_essay .bd{ max-width:800px; margin:0 auto; padding:5%;}
+.m_essay .bd{ max-width:840px; margin:0 auto; padding:5%;}
 .m_essay h1{ border-bottom:#999 1px solid; font-family:oswald,Helvetica,Arial,Microsoft Yahei,Simsun,sans-serif;}
 
 pre{ display:none;margin-bottom:0!important;word-wrap:break-word;}
