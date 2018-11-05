@@ -360,7 +360,7 @@ var common_pro_num_base = ''; //基本css值对数
 var common_code_base = []; //基本css值对
 var common_pro_base = []; //基本css属性
 var common_val_base = []; //基本css值
-common_val_base[0] = $('#ani_initName').val();
+common_val_base[0] = $('#ani_initFile').val();
 
 // 动画全部关键帧属性定义
 var css_line_base = []; //全部关键帧css语句
