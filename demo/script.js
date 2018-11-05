@@ -422,7 +422,7 @@ function commonInit(){
 	common_pro_base = [];
 	common_val_base = [];
 
-	for(var i=0;i<common_pro_num_base;i++){
+	for(var i=1;i<common_pro_num_base;i++){
 
 		var $thisCommon = $('.key_common:eq('+ i +')');
 
