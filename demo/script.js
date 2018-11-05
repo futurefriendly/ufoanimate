@@ -195,7 +195,8 @@ function switchlang(bl){
 		la_179 : ['支持我们','Donate to us'],
 		la_180 : ['“资本不仅是财富，而是让梦想成真的力量。”','“The value of capital is to create, not just wealth.”'],
 		la_181 : ['摩根士丹利曾经拍摄过一个广告短片，名叫','One of our favorite videos is Morgan Stanley’s'],
-		la_182 : ['如果你也相信梦想总有一天将会成真，请点击下面的按钮赞助本网站，谢谢！','If you also believe that every dream will come true, don’t hesitate to donate this site. Thank you!']
+		la_182 : ['如果你也相信梦想总有一天将会成真，请点击下面的按钮赞助本网站，谢谢！','If you also believe that every dream will come true, don’t hesitate to donate this site. Thank you!'],
+		la_183 : ['\<div class=\"LI-profile-badge mt20\" data-version=\"v1\" data-size=\"large\" data-locale=\"zh_CN\" data-type=\"horizontal\" data-theme=\"dark\" data-vanity=\"bennychak\"\>\<a class=\"LI-simple-link\" href=\"https\:\/\/cn.linkedin.com\/in\/bennychak\/zh-cn\?trk=profile-badge\"\>翟东方\<\/a\>\<\/div\>','\<div class=\"LI-profile-badge mt20\" data-version=\"v1\" data-size=\"large\" data-locale=\"en_US\" data-type=\"horizontal\" data-theme=\"dark\" data-vanity=\"bennychak\"\>\<a class=\"LI-simple-link\" href=\"https\:\/\/cn.linkedin.com\/in\/bennychak\?trk=profile-badge\"\>Benny Chak\<\/a\>\<\/div\>']
 	};
 	var thislang = '';
          
@@ -206,7 +207,7 @@ function switchlang(bl){
             /* english */
             $('[data-lang]').each(function(){
             	thislang = $(this).data('lang')
-            	$(this).text(eval('lang.' + thislang)[1]);
+            	$(this).html(eval('lang.' + thislang)[1]);
             });
             $('#langs').text('简体中文');
             break;
@@ -214,7 +215,7 @@ function switchlang(bl){
             /* 简体中文 */
             $('[data-lang]').each(function(){
             	thislang = $(this).data('lang');
-            	$(this).text(eval('lang.' + thislang)[0]);
+            	$(this).html(eval('lang.' + thislang)[0]);
             });
             $('#langs').text('English');
             break;
