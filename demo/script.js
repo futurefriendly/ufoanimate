@@ -422,7 +422,7 @@ function commonInit(){
 	common_pro_base = [];
 	common_val_base = [];
 
-	for(var i=1;i<common_pro_num_base;i++){
+	for(var i=0;i<common_pro_num_base;i++){
 
 		var $thisCommon = $('.key_common:eq('+ i +')');
 
@@ -519,7 +519,7 @@ function cssInit(){
 		css_keyframes_base[i] = '  ' + key_pct + '%{\r\n'+ css_line_base[i] +'  }\r\n';
 		css_keyframes_line_base += css_keyframes_base[i];
 	}
-	css_keyframes_line_base = '@keyframes ' + common_val_base[1] + '{\r\n' + css_keyframes_line_base + '}';
+	css_keyframes_line_base = '@keyframes ' + common_val_base[0] + '{\r\n' + css_keyframes_line_base + '}';
 }
 
 // 清空css代码
