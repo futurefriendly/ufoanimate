@@ -381,7 +381,7 @@ pre{ display:none;margin-bottom:0!important;word-wrap:break-word;}
 .queryloader_show .queryloader__overlay{ display:block}
 .queryloader__overlay__percentage{ font-size:16px!important; color:#fff!important; margin-top:0!important}
 .queryloader__overlay__bar{ display:block; width:60px!important; height:60px!important; margin:-70px 0 0 -30px!important;
-	background:url(http://static.didialift.com/pinche/images/spark/loading.png) center center no-repeat; background-size:40px 40px;
+	background:url(https://static.didialift.com/pinche/images/spark/loading.png) center center no-repeat; background-size:40px 40px;
 	background-color:transparent!important;
 	-webkit-animation:ani_rotate 1s linear infinite;
 	animation:ani_rotate 1s linear infinite;
