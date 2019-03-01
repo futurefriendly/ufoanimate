@@ -380,13 +380,13 @@ if ( typeof window.console.emulated === 'undefined' ) {
 				 * The baseUrl to load Google's Prettify from.
 				 * This is used to load in Google's Prettify if the load option is true and it was not found.
 				 */
-				'prettifyBaseUrl': false ? '/demo/jquery-syntaxhighlighter/prettify' : '/demo/jquery-syntaxhighlighter/prettify',
+				'prettifyBaseUrl': false ? '/ufoanimate/demo/jquery-syntaxhighlighter/prettify' : '/ufoanimate/demo/jquery-syntaxhighlighter/prettify',
 
 				/**
 				 * The baseUrl to load our Syntax Highlighter from.
 				 * This is used to load in the stylesheet and additional themes.
 				 */
-				'baseUrl': false ? '/demo/jquery-syntaxhighlighter' : '/demo/jquery-syntaxhighlighter'
+				'baseUrl': false ? '/ufoanimate/demo/jquery-syntaxhighlighter' : '/ufoanimate/demo/jquery-syntaxhighlighter'
 			},
 
 			// Init
