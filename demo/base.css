@@ -585,7 +585,7 @@ a.c_a2:active{ color:#999}
 .img_bg1{ background:#d2d2d2 url(http://mat1.gtimg.com/www/mb/images/mv/bgpattern1.jpg);}
 .img_bg2{ background:#f1f1f1 url(http://mat1.gtimg.com/www/mb/images/weishi/bgpattern2.jpg);}
 .img_bg3,.img_bg3 .inner{ background:#000 url(./images/grid.png); background-size:100px 100px; background-attachment:fixed;}
-.img_bg4,.img_bg4 .inner{ background:#010b13 url(./images/space.jpg) center center no-repeat; background-size:cover; background-attachment:fixed;}
+.img_bg4,.img_bg4 .inner{ background:#010b13 url(./images/space.png) center center no-repeat; background-size:cover; background-attachment:fixed;}
 
 .nobg{ background:none;}
 
