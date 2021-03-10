@@ -1281,18 +1281,10 @@ $(function(){
 
 	// 复制
 	// zeroClipboard config
-	var $client = new ZeroClipboard($('.f_copy_btn'));
+	var clipboard = new ClipboardJS('.f_copy_btn');
 
-	$client.on( "ready", function( readyEvent ) {
-	  // alert( "ZeroClipboard SWF is ready!" );
-
-	  $client.on( "aftercopy", function( event ) {
-	    // `this` === `client`
-	    // `event.target` === the element that was clicked
-	    // event.target.style.display = "none";
-	    // alert("内容已复制: \r\n" + event.data["text/plain"] );
-	    txtAlert(['<span class="icon-checkmark"></span> Copy success!','<span class="icon-checkmark"></span> 复制代码成功！']);
-	  } );
+	clipboard.on( 'success', function(e) {
+	txtAlert(['<span class="icon-checkmark"></span> Copy success!','<span class="icon-checkmark"></span> 复制代码成功！']);
 	} );
 
 	(function(){
