@@ -1,0 +1,961 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>UFO Animate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" type="text/css" href="./animate.min.css" />
+<link rel="stylesheet" href="./demo/style.css" />
+<script src="./demo/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<script type="text/javascript" src="./demo/queryloader2.min.js"></script>
+<script type="text/javascript">
+
+// document.ontouchmove = function(e) { e.preventDefault(); }
+
+document.createElement('header');
+document.createElement('footer');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+
+// loading
+    
+window.addEventListener('DOMContentLoaded', function() {
+
+    new QueryLoader2(document.querySelector("body"), {
+        barColor: "#ff8903",
+        backgroundColor: "#111",
+        percentage: true,
+        barHeight: 3,
+        minimumTime: 0,
+        maxTime:1000000,
+        fadeOutTime: 300,
+        onComplete : function(){
+        	txtAlert(['<span class="icon-checkmark"></span> Loading Success! Support for dragging pictures to canvas area for preview.','<span class="icon-checkmark"></span> 加载成功！支持将图片拖拽到画布区域预览。']);
+        }
+    });
+});
+</script>
+<body ontouchstart="">
+<div class="topnav">
+	<div class="bd clear">
+		<div class="logo clear">
+			<a tabindex="0" id="home" class="c3 dis_b left pl10 pr10 tx_24 tx_osw c_tw" data-lang="la_1" href="javascript:;">UFO Animate</a>
+		</div>
+		<div class="nav clear">
+
+			<div class="item j_panel select" rel="Animate.css">
+				<a tabindex="0" href="javascript:;" data-role="1" data-lang="la_2" class="txt">Animate.css</a>
+			</div><div class="item j_panel" rel="Custom">
+				<a tabindex="0" href="javascript:;" data-role="2" data-lang="la_3" class="txt">Custom</a>
+				<div class="topNavSub" style="display:none">
+					<b class="a a5 a_b"><u></u></b>
+					<ul class="clear">
+						<li><a href="#test" data-lang="la_4">Animate.css</a></li>
+					</ul>
+				</div>
+			</div><div class="item j_panel" rel="CSS Manual (Chinese Only)">
+				<a tabindex="0" href="javascript:;" data-role="3" data-lang="la_5" class="txt">CSS Manual (Chinese Only)</a>
+			</div><div class="item j_panel" rel="About">
+				<a tabindex="0" href="javascript:;" data-role="4" data-lang="la_165" class="txt">About</a>
+			</div>
+			<div class="right">
+				<div class="item">
+					<span id="langs" tabindex="0" class="txt">English</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="topnav_ph"></div>
+
+<div class="container">
+	<aside id="animatecss">
+		<div class="aniCate" id="aniCate1">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_6">Attention Seekers</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item select"><a tab-index="0" href="#" class="lk" title="bounce"><span class="t" data-lang="la_7">bounce</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flash"><span class="t" data-lang="la_8">flash</span></a></li>
+					<li class="item"><a href="#" class="lk" title="jello"><span class="t" data-lang="la_9">jello</span></a></li>
+					<li class="item"><a href="#" class="lk" title="pulse"><span class="t" data-lang="la_10">pulse</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rubberBand"><span class="t" data-lang="la_11">rubberBand</span></a></li>
+					<li class="item"><a href="#" class="lk" title="shake"><span class="t" data-lang="la_12">shake</span></a></li>
+					<li class="item"><a href="#" class="lk" title="swing"><span class="t" data-lang="la_13">swing</span></a></li>
+					<li class="item"><a href="#" class="lk" title="tada"><span class="t" data-lang="la_14">tada</span></a></li>
+					<li class="item"><a href="#" class="lk" title="wobble"><span class="t" data-lang="la_15">wobble</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_16">Bouncing Entrances</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="bounceIn"><span class="t" data-lang="la_17">bounceIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInDown"><span class="t" data-lang="la_18">bounceInDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInLeft"><span class="t" data-lang="la_19">bounceInLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInRight"><span class="t" data-lang="la_20">bounceInRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceInUp"><span class="t" data-lang="la_21">bounceInUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_22">Bouncing Exits</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="bounceOut"><span class="t" data-lang="la_23">bounceOut</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutDown"><span class="t" data-lang="la_24">bounceOutDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutLeft"><span class="t" data-lang="la_25">bounceOutLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutRight"><span class="t" data-lang="la_26">bounceOutRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="bounceOutUp"><span class="t" data-lang="la_27">bounceOutUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_28">Fading Entrances</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="fadeIn"><span class="t" data-lang="la_29">fadeIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInDown"><span class="t" data-lang="la_30">fadeInDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInDownBig"><span class="t" data-lang="la_31">fadeInDownBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInLeft"><span class="t" data-lang="la_32">fadeInLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInLeftBig"><span class="t" data-lang="la_33">fadeInLeftBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInRight"><span class="t" data-lang="la_34">fadeInRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInRightBig"><span class="t" data-lang="la_35">fadeInRightBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInUp"><span class="t" data-lang="la_36">fadeInUp</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeInUpBig"><span class="t" data-lang="la_37">fadeInUpBig</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_38">Fading Exits</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="fadeOut"><span class="t" data-lang="la_39">fadeOut</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutDown"><span class="t" data-lang="la_40">fadeOutDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutDownBig"><span class="t" data-lang="la_41">fadeOutDownBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutLeft"><span class="t" data-lang="la_42">fadeOutLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutLeftBig"><span class="t" data-lang="la_43">fadeOutLeftBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutRight"><span class="t" data-lang="la_44">fadeOutRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutRightBig"><span class="t" data-lang="la_45">fadeOutRightBig</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutUp"><span class="t" data-lang="la_46">fadeOutUp</span></a></li>
+					<li class="item"><a href="#" class="lk" title="fadeOutUpBig"><span class="t" data-lang="la_47">fadeOutUpBig</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_48">Flippers</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="flip"><span class="t" data-lang="la_49">flip</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipInX"><span class="t" data-lang="la_50">flipInX</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipInY"><span class="t" data-lang="la_51">flipInY</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipOutX"><span class="t" data-lang="la_52">flipOutX</span></a></li>
+					<li class="item"><a href="#" class="lk" title="flipOutY"><span class="t" data-lang="la_53">flipOutY</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_54">Lightspeed</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="lightSpeedIn"><span class="t" data-lang="la_55">lightSpeedIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="lightSpeedOut"><span class="t" data-lang="la_56">lightSpeedOut</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_57">Rotating Entrances</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="rotateIn"><span class="t" data-lang="la_58">rotateIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInDownLeft"><span class="t" data-lang="la_59">rotateInDownLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInDownRight"><span class="t" data-lang="la_60">rotateInDownRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInUpLeft"><span class="t" data-lang="la_61">rotateInUpLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateInUpLeft"><span class="t" data-lang="la_62">rotateInUpLeft</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_63">Rotating Exits</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="rotateOut"><span class="t" data-lang="la_64">rotateOut</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutDownLeft"><span class="t" data-lang="la_65">rotateOutDownLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutDownRight"><span class="t" data-lang="la_66">rotateOutDownRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutUpLeft"><span class="t" data-lang="la_67">rotateOutUpLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotateOutUpRight"><span class="t" data-lang="la_68">rotateOutUpRight</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_69">Sliding Entrances</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="slideInDown"><span class="t" data-lang="la_70">slideInDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInLeft"><span class="t" data-lang="la_71">slideInLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInRight"><span class="t" data-lang="la_72">slideInRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideInUp"><span class="t" data-lang="la_73">slideInUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_74">Sliding Exits</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="slideOutDown"><span class="t" data-lang="la_75">slideOutDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutLeft"><span class="t" data-lang="la_76">slideOutLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutRight"><span class="t" data-lang="la_77">slideOutRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="slideOutUp"><span class="t" data-lang="la_78">slideOutUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_79">Specials</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="hinge"><span class="t" data-lang="la_80">hinge</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rollIn"><span class="t" data-lang="la_81">rollIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rollOut"><span class="t" data-lang="la_82">rollOut</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_83">Zoom Entrances</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="zoomIn"><span class="t" data-lang="la_84">zoomIn</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInDown"><span class="t" data-lang="la_85">zoomInDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInLeft"><span class="t" data-lang="la_86">zoomInLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInRight"><span class="t" data-lang="la_87">zoomInRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomInUp"><span class="t" data-lang="la_88">zoomInUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span data-lang="la_89">Zoom Exits</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="zoomOut"><span class="t" data-lang="la_90">zoomOut</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutDown"><span class="t" data-lang="la_91">zoomOutDown</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutLeft"><span class="t" data-lang="la_92">zoomOutLeft</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutRight"><span class="t" data-lang="la_93">zoomOutRight</span></a></li>
+					<li class="item"><a href="#" class="lk" title="zoomOutUp"><span class="t" data-lang="la_94">zoomOutUp</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aniCate" id="aniCate2" style="display:none">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer"></span> <span data-lang="la_95">Configuration</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tb_form pl0 pr0">
+						<table>
+							<tbody>
+								<tr>
+									<th data-lang="la_96">UFO Name</th>
+									<td>
+										<div class="inputVali inputHelp">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initFile" class="key_val" type="text" data-type="text" placeholder="ufo name" value="ufo_1" maxlength="10" data-cntitle="起一个好记的名字" data-entitle="Give a nickname" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_97">Airline Name</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-name" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<input tabindex="0" id="ani_initName" class="key_val" type="text" data-type="string" placeholder="airline name" value="airline_1" maxlength="10" data-cntitle="定义CSS代码选择器名称" data-entitle="Defining the name of CSS selector" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_98">Flight Duration</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-duration" data-units="s">
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initTime" class="key_val" type="text" data-type="float" placeholder="0" value="1" maxlength="3" data-cntitle="动画播放时长" data-entitle="Defining animation-duration" />
+											</div>
+											<span class="units" data-lang="la_100">second(s)</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_99">Delay</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-delay" data-units="s">
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initDelay" class="key_val" type="text" data-type="float" placeholder="0" value="0" maxlength="3" data-cntitle="动画开始前的预备时间" data-entitle="Defining animation-delay" />
+											</div>
+											<span class="units" data-lang="la_100">second(s)</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_101">Flight Times</th>
+									<td>
+										<div class="key_common inputVali inputHelp" data-role="animation-iteration-count" data-units="">
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initCount" class="key_val" type="text" data-type="number" placeholder="0" value="1" maxlength="3" data-cntitle="动画播放次数，infinite为无限循环" data-entitle="Defining animation-iteration-count" />
+											</div>
+											<div class="mt5">
+												<span class="btn btn3 e_btn_s e_btn_inb">
+													<a tabindex="0" href="javascript:;" onclick="$('#ani_initCount').val('infinite').attr('disabled',true);$(this).parents('.inputVali').removeClass('inputCur').siblings('.f_ins').remove();ani_direction();commonInit();" data-lang="la_102">infinite</a>
+												</span>
+												<span class="btn btn3 e_btn_s e_btn_inb">
+													<a tabindex="0" href="javascript:;" onclick="$('#ani_initCount').val('1').attr('disabled',false);ani_direction();$(this).parents('.inputVali').removeClass('inputCur').siblings('.f_ins').remove();commonInit();" data-lang="la_103">flight once</a>
+												</span>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_104">Direction</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-direction" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initDirection" class="key_val" disabled="disabled" data-cntitle="定义是否允许在偶次执行动画时进行反向播放，如选择往返飞行，则动画会在奇数次数（1、3、5 等等）正常播放，而在偶数次数（2、4、6 等等）反向播放" data-entitle="Defining animation-direction. If you select “alternate”, the animation will play normally at odd times (1, 3, 5, etc.) and play reversely at even times (2, 4, 6, and so on).">
+													<option value="normal" data-lang="la_105">normal</option>
+													<option value="alternate" data-lang="la_106">alternate</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_107">Timing function</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-timing-function" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initTimingfunction1" class="key_val" data-cntitle="定义动画加速度" data-entitle="Defining animation timing-function">
+													<option value="linear" data-lang="la_108">linear</option>
+													<option value="ease" data-lang="la_109">ease</option>
+													<option value="ease-in" data-lang="la_110">ease-in</option>
+													<option value="ease-out" data-lang="la_111">ease-out</option>
+													<option value="ease-in-out" data-lang="la_112">ease-in-out</option>
+													<option value="steps" data-lang="la_113">steps</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr id="ani_initTimingfunction2" style=" display:none;">
+									<th data-lang="la_114">Step Count</th>
+									<td>
+										<div class="inputVali inputHelp">
+											<div class="inputTxt" style="width:30%;">
+												<input tabindex="0" class="key_val" type="text" data-type="number" placeholder="Steps Count" value="1" maxlength="3" data-cntitle="将时间轴等分为若干区间，以划分区间的端点为关键帧进行逐帧播放" data-entitle="Defining steps of timing-function" />
+											</div>
+											<span class="units" data-lang="la_115">step(s)</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_116">Fill Mode</th>
+									<td>
+										<div class="key_common inputHelp" data-role="animation-fill-mode" data-units="">
+											<div class="inputTxt" style="width:70%">
+												<select tabindex="0" id="ani_initFillmode" class="key_val" data-cntitle="动画开始前和结束后的状态" data-entitle="Defining animation-fill-mode">
+													<option value="none" data-lang="la_117">none</option>
+													<option value="forwards" data-lang="la_118">forwards</option>
+													<option value="backwards" data-lang="la_119">backwards</option>
+													<option value="both" data-lang="la_120">both</option>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th data-lang="la_121">Registration Point</th>
+									<td>
+										<div class="key_common inputHelp" data-role="transform-origin" style="display:none">
+											<div class="inputTxt" style="width:30%">
+												<input tabindex="0" id="ani_initOrigin1" class="key_val" type="text" data-cntitle="定义元件的变形原点" data-entitle="Defining the registration point for transformation" value="center" maxlength="10" /></span><span class="ml5"><input tabindex="0" id="ani_initOrigin2" class="inputTxt e_input_ra key_val" type="text" style="width:30%" value="center" maxlength="10" />
+											</div>
+										</div>
+										<div class="mt5 inputHelp">
+											<div id="control_q" class="inputTxt control_q clear">
+												<div tabindex="0" data-og1="left" data-og2="top" class="c c1 inputVir" data-cntitle="动画变换时以左上角为注册点" data-entitle="registration point at top left" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="top" class="c c2 inputVir" data-cntitle="动画变换时以正上方为注册点" data-entitle="registration point at top" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="top" class="c c3 inputVir" data-cntitle="动画变换时以右上角为注册点" data-entitle="registration point at top right" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="left" data-og2="center" class="c c4 inputVir" data-cntitle="动画变换时以正左方为注册点" data-entitle="registration point at left" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="center" class="c c5 cur inputVir" data-cntitle="动画变换时以正中心为注册点" data-entitle="registration point at center" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="center" class="c c6 inputVir" data-cntitle="动画变换时以正右方为注册点" data-entitle="registration point at right" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="left" data-og2="bottom" class="c c7 inputVir" data-cntitle="动画变换时以左下角为注册点" data-entitle="registration point at bottom left" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="center" data-og2="bottom" class="c c8 inputVir" data-cntitle="动画变换时以正下方为注册点" data-entitle="registration point at bottom" onclick="control_q(this)"><i></i></div>
+												<div tabindex="0" data-og1="right" data-og2="bottom" class="c c9 inputVir" data-cntitle="动画变换时以右下角为注册点" data-entitle="registration point at bottom right" onclick="control_q(this)"><i></i></div>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-clock"></span> <span data-lang="la_122">Timeline</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="m_timeline">
+						<div class="bd">
+							<span tabindex="0" class="lb lb_select key_lb" style="left:0%" title="Click to edit"><span class="key_pct">0</span>%<a class="lb_del" title="Delete keyframe" href="javascript:;">&times;</a><span class="ar"></span></span>
+						</div>
+						<div class="ft">
+							<div id="playTL">
+								<div class="tl_arr"></div>
+							</div>
+						</div>
+					</div>
+					<div class="tb_form pl0 pr0 mt10">
+						<table>
+							<tbody>
+								<tr>
+									<th data-lang="la_123">Insert keyframes</th>
+									<td>
+										<div class="dis_inb inputVali inputHelp" style="width:50%">
+											<div class="inputTxt">
+												<input tabindex="0" id="key_new" type="text" data-type="number" placeholder="0" value="100" maxlength="3" data-cntitle="设置动画的关键帧，范围0-100，回车确认。" data-entitle="Set animation keyframes, range 0-100, Press Enter to confirm." />
+											</div>
+										</div>
+										<span class="tx_14">%</span>
+										<div class="mt5">
+											<span class="btn btn3 e_btn_s e_btn_inb">
+												<a href="javascript:;" id="insertKey"><span class="icon-plus mr5 vt_m"></span><span class="vt_m" data-lang="la_124">插入</span></a>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer"></span> <span data-lang="la_125">Keyframes</span><span class="ml10 c_t2 vt_m">(<span id="keyStep" class="keyStep">0</span>%)</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tb_form pl0 pr0">
+						<table id="keytb_demo" style="display:none">
+							<tr>
+								<th><span class="key_property"></span>:</th>
+								<td>
+									<div class="dis_inb" style="width:50%">
+										<div class="inputTxt">
+											<input tabindex="0" class="key_val tx_c" data-units="" type="text" maxlength="10" value="" data-cntitle="点击属性以编辑" data-entitle="Click on properties to edit" />
+										</div>
+									</div>
+									<span class="units"></span>
+									<div class="dis_inb tx_r" style="width:40%">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<a href="javascript:;" class="pro_del" title="删除属性"><span class="icon-bin"></span></a>
+										</span>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<table id="keytb" class="keytb">
+						</table>
+						<div id="f_emptypro" class="pt10 pb10 tx_c tx_12 tx_yh c_t3" data-lang="la_126">This keyframe has no properties set.</div>
+						<input type="hidden" id="trans_merge" value="" />
+						<hr class="hr1 mt15" />
+						<table class="mt15">
+							<tbody>
+								<tr>
+									<th data-lang="la_127">Add properties</th>
+									<td>
+										<div class="dis_inb" style="width:50%">
+											<div class="inputTxt">
+												<select id="newPro">
+													<optgroup label="basic properties">
+														<option value="width" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_128">width</option>
+														<option value="height" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_129">height</option>
+														<option value="background" data-cnunits="填写16进制颜色，如#FFFFFF，" data-enunits="Fill in the hexadecimal color, such as #FFFFFF, " data-lang="la_130">background</option>
+														<option value="border-radius" data-cnunits="需要单位，如:5px或50%，" data-enunits="Need a unit, such as: 5px or 50%, " data-lang="la_131">border-radius</option>
+														<option value="top" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_132">top</option>
+														<option value="right" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_133">right</option>
+														<option value="bottom" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_134">bottom</option>
+														<option value="left" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_135">left</option>
+														<option value="opacity" data-cnunits="取值范围0-1，0为完全透明，" data-enunits="Value range 0-1, 0 is completely transparent," data-lang="la_136">opacity</option>
+													</optgroup>
+													<optgroup label="advanced properties">
+														<option value="rotateX" data-transtype="trans" data-transsort="10" data-cnunits="需要单位，如:360deg，" data-enunits="Need a unit, such as: 360deg, " data-lang="la_137">rotateX</option>
+														<option value="rotateY" data-transtype="trans" data-transsort="11" data-cnunits="需要单位，如:360deg，" data-enunits="Need a unit, such as: 360deg, " data-lang="la_138">rotateY</option>
+														<option value="rotateZ" data-transtype="trans" data-transsort="12" data-cnunits="需要单位，如:360deg，" data-enunits="Need a unit, such as: 360deg, " data-lang="la_139">rotateZ</option>
+														<option value="translateX" data-transtype="trans" data-transsort="2" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_140">translateX</option>
+														<option value="translateY" data-transtype="trans" data-transsort="3" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_141">translateY</option>
+														<option value="translateZ" data-transtype="trans" data-transsort="4" data-cnunits="需要单位，如:100px或50%，" data-enunits="Need a unit, such as: 100px or 50%, " data-lang="la_142">translateZ</option>
+														<option value="scaleX" data-transtype="trans" data-transsort="5" data-cnunits="填写缩放倍数，如1.5，" data-enunits="Fill in the zoom factor, such as 1.5, " data-lang="la_143">scaleX</option>
+														<option value="scaleY" data-transtype="trans" data-transsort="6" data-cnunits="填写缩放倍数，如1.5，" data-enunits="Fill in the zoom factor, such as 1.5, " data-lang="la_144">scaleY</option>
+														<option value="scaleZ" data-transtype="trans" data-transsort="7" data-cnunits="填写缩放倍数，如1.5，" data-enunits="Fill in the zoom factor, such as 1.5, " data-lang="la_145">scaleZ</option>
+														<option value="skewX" data-transtype="trans" data-transsort="8" data-cnunits="需要单位，如:360deg，" data-enunits="Need a unit, such as: 360deg, " data-lang="la_146">skewX</option>
+														<option value="skewY" data-transtype="trans" data-transsort="9" data-cnunits="需要单位，如:360deg，" data-enunits="Need a unit, such as: 360deg, " data-lang="la_147">skewY</option>
+													</optgroup>
+													<optgroup label="property for 3d effect">
+														<option value="perspective" data-transtype="trans" data-transsort="1" data-cnunits="需要单位，如:100px，值越大观察距离越远，" data-enunits="Need unit, such as: 100px, the greater the value, the farther the observation distance, " data-lang="la_148">perspective</option>
+													</optgroup>
+												</select>
+												<i class="arr"></i>
+											</div>
+										</div>
+										<div class="inputHelp dis_inb" style="width:40%">
+											<div class="inputTxt">
+												<input tabindex="0" id="newVal" type="text" data-cntitle="回车键连续输入下一属性" data-entitle="Press Enter to input next property" placeholder="value" maxlength="10" />
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>&nbsp;</th>
+									<td>
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<a href="javascript:;" id="addPro"><span class="icon-plus mr5 vt_m"></span><span class="vt_m" data-lang="la_149">Add property</span></a>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr class="hr1 mt10" />
+						<div class="mt20 tx_c">
+							<span id="aniPlay" class="btn btn1 e_btn_inb">
+								<button><span class="icon-play3"></span></button>
+							</span><span id="aniPause" class="btn btn3 e_btn_inb ml10">
+								<button disabled="disabled"><span class="icon-pause2"></span></button>
+							</span><span id="aniStop" class="btn btn3 e_btn_inb ml10">
+								<button disabled="disabled"><span class="icon-stop2"></span></button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aniCate" id="aniCate3" style="display:none">
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span>变形</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transform"><span class="t">transform[变形基础]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="rotate"><span class="t">rotate()[旋转]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="scale"><span class="t">scale()[缩放]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="translate"><span class="t">translate()[位移]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="skew"><span class="t">skew()[倾斜]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="matrix"><span class="t">matrix()[矩阵变形]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="perspective"><span class="t">perspective[透视]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span>过渡</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transition-property"><span class="t">transition-property[过渡的CSS属性]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-duration"><span class="t">transition-duration[过渡时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-delay"><span class="t">transition-delay[延迟时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transition-timing-function"><span class="t">transition-timing-function[过渡效果]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span>动画</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="animation-name"><span class="t">animation-name[航线名称]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-duration"><span class="t">animation-duration[动画持续时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-timing-function"><span class="t">animation-timing-function[播放方式]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-delay"><span class="t">animation-delay[开始播放时间]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-iteration-count"><span class="t">animation-iteration-count[播放次数]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-direction"><span class="t">animation-direction[播放方向]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-fill-mode"><span class="t">animation-fill-mode[播放后的状态]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="animation-play-state"><span class="t">animation-play-state[对象动画的状态]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<div class="SC">
+				<div class="SC_hd">
+					<h2 class="tit"><strong class="tit_tx"><span class="icon-pilcrow"></span> <span>关联属性</span></strong></h2>
+					<div class="opt"></div>
+				</div>
+				<div class="SC_bd">
+					<div class="tagCloud">
+					<ul class="clear">
+					<li class="item"><a href="#" class="lk" title="transform-origin"><span class="t">transform-origin[变形原点]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="perspective-origin"><span class="t">perspective-origin[透视原点]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="backface-visibility"><span class="t">backface-visibility[隐藏内容的背面]</span></a></li>
+					<li class="item"><a href="#" class="lk" title="transform-style"><span class="t">transform-style[3D呈现]</span></a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<article id="article">
+		<div class="m_corearea">
+			<div class="m_corearea_bd clear">
+				<div class="m_stage x-panel img_bg3"><!-- 图片拖曳范围 -->
+					<div id="f_stage_alert" class="noticebar" style="position:absolute; z-index:1; top:62px; left:0; width:100%; padding:0 430px; box-sizing:border-box; display:none;">
+						<div class="bd">
+						<div class="con pl10 pr10 pt5 pb5 tx_c tx_12 c_t2"></div>
+						</div>
+					</div>
+					<div class="animationWrap">
+						<div class="head"></div>
+						<div class="inner">
+							<div class="bd">
+								<img id="animation" class="airline_1" src="./demo/images/ufo1.png" alt="" />
+								<div class="pos" style="display:none"></div>
+							</div>
+						</div>
+						<div class="foot"></div>
+					</div>
+					<div class="txtDesc tx_12 c_t2"><span class="bd"><span class="res"><span id="txtDesc" class="vt_m tx_osw"></span></span></span></div>
+				</div>
+				<div class="m_property">
+					<div id="css_display">
+						<div class="SC">
+							<div class="SC_hd">
+								<h2 class="tit"><strong class="tit_tx"><span class="icon-rocket"></span> <span data-lang="la_150">Display</span></strong></h2>
+								<div class="opt"></div>
+							</div>
+							<div class="SC_bd">
+								<div class="tb_form pl0 pr0">
+									<table>
+										<tbody>
+											<tr>
+												<th data-lang="la_151">Device</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_device">
+																<option value="0">Desktop</option>
+																<option value="device_ipx">iPhoneX (5.8",1125*2436)</option>
+																<option value="device_ip6plus">iPhone6+,6s+,7+,8+ (5.5",1080*1920)</option>
+																<option value="device_ip6">iPhone6,6s,7,8 (4.7",750*1334)</option>
+																<option value="device_ip5">iPhone5,5s,5c,SE (4",640*1136)</option>
+																<option value="device_ip4">iPhone4,4s (3.5",640*960)</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-lang="la_152">View Ratio</th>
+												<td>
+													<div>
+														<div class="inputRange" style="width:70%">
+															<input id="set_view" type="range" min="25" max="100" step="25" value="100" />
+															<i class="arr"></i>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-lang="la_153">Background</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_bg">
+																<option value="img_bg3" data-lang="la_154">Grids</option>
+																<option value="img_bg4" data-lang="la_155">Space</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th data-lang="la_156">Select UFO</th>
+												<td>
+													<div>
+														<div class="inputTxt" style="width:70%">
+															<select id="set_ufo">
+																<option value="./demo/images/ufo1.png">UFO 1</option>
+																<option value="./demo/images/ufo2.png">UFO 2</option>
+																<option value="./demo/images/ufo3.png">UFO 3</option>
+																<option value="./demo/images/ufo4.png">UFO 4</option>
+																<option value="./demo/images/ufo5.png">UFO 5</option>
+																<option value="./demo/images/ufo6.png">UFO 6</option>
+																<option value="./demo/images/ufo7.png">UFO 7</option>
+																<option value="./demo/images/ufo8.png">UFO 8</option>
+																<option value="./demo/images/ufo9.png">UFO 9</option>
+															</select>
+															<i class="arr"></i>
+														</div>
+													</div>
+													<div class="mt5">
+														<span class="btn btn3 e_btn_s e_btn_inb">
+															<a tabindex="0" id="upload" href="javascript:;" data-lang="la_157">Custom UFO picture</a>
+														</span>
+														<form style="display:none" action="javascript:;"><input type="file" id="file" accept=".jpg,.jpeg,.gif,.png,.bmp"></form>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="css_use">
+						<div class="inner">
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer"></span> <span data-lang="la_158">Import files</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="#importAniCss"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<pre id="importAniCss" class="highlight language-html code" contenteditable="true">&lt;!-- animate.css was created by daneden.--&gt;<br/>&lt;link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" /&gt;</pre>
+								</div>
+							</div>
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer"></span> <span data-lang="la_160">Use this animation</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="#animatecssPreview"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<pre id="animatecssPreview" class="highlight language-javascript code" contenteditable="true">$('#animation').addClass('animated <span id="animatecssMet">bounce</span>');</pre>
+								</div>
+							</div>
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer"></span> <span data-lang="la_161">Callback function (optional)</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="#f_ani_callback"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<div id="animatecssPreview">
+<pre id="f_ani_callback" class="highlight language-javascript code" contenteditable="true">$('#animation').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+  // Hello World!
+});</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="css_code" style="display:none">
+						<div class="inner">
+							<div class="SC">
+								<div class="SC_hd">
+									<h2 class="tit"><strong class="tit_tx"><span class="icon-equalizer mr5 vt_m"></span><span class="vt_m">CSS</span></strong></h2>
+									<div class="opt">
+										<span class="btn btn3 e_btn_s e_btn_inb">
+											<button tabindex="0" id="unlockedit" class="btn btn1"><span class="icon-unlocked mr5 vt_m"></span><span class="vt_m" data-lang="la_162">Unlock</span></button>
+											<button tabindex="0" id="lockedit" class="btn btn1" style="display:none"><span class="icon-lock mr5 vt_m"></span><span class="vt_m" data-lang="la_163">Lock</span></button>
+											<button tabindex="0" class="btn btn1" onclick="cssPrint();"><span class="icon-history mr5 vt_m"></span><span class="vt_m" data-lang="la_164">Revert</span></button>
+											<button tabindex="0" class="btn btn1 f_copy_btn" data-clipboard-target="#codePreview"><span class="icon-copy mr5 vt_m"></span><span class="vt_m" data-lang="la_159">Copy</span></button>
+										</span>
+									</div>
+								</div>
+								<div class="SC_bd">
+									<div id="codePreview">
+<pre class="codePreview highlight language-css code" contenteditable="true"><style id="codewrap" style="display:block;" contenteditable="false">#animation{
+}</style></pre></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="ajaxHtml" class="m_essay e_essay_ajax" data-src="./demo/library/transform.html" style="display:none"></div>
+		<div id="about" class="m_essay e_essay_blank" style="display:none">
+			<div class="bd">
+				<h1 class="tx_30 pb20 tx_osw" data-lang="la_179">Donate to us</h1>
+				<div class="mt20 clear" style="position:relative; padding-bottom:80px">
+					<div class="left mr20" style="width:120px">
+						<img src="./demo/images/ufo1.png" style="max-width:100%" />
+					</div>
+					<div style="overflow:hidden">
+						<p class="tx_20 tx_osw"><span data-lang="la_181">One of our favorite videos is Morgan Stanley’s</span> <i>“WHAT MATTERS”</i></p>
+						<div class="mt20" style="padding-right:140px">
+							<div style="position:relative;padding-bottom:56.25%;overflow:hidden;border-radius:10px;height:0">
+								<iframe style="width:100%; height:100%; position:absolute; top:0; left:0" src="https://www.ispot.tv/share/ABnT" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							<!-- <video preload="preload" controls style="width: 100%;" poster="https://brightcove04pmdo-a.akamaihd.net/644391012001/644391012001_4888638950001_capture.jpg" src="./demo/media/what-matters.mp4"></video> -->
+						</div>
+						<blockquote class="tx_18 tx_osw" data-lang="la_180">The value of capital is to create, not just wealth.”</blockquote>
+						<p class="mt10 tx_20 tx_osw"><span data-lang="la_182">If you also believe that every dream will come true, don’t hesitate to donate this site. Thank you!</span></p>
+						<p style="position:absolute; bottom:0">
+							<a href="https://www.paypal.me/bennychak" class="btn_donate"><img src="./demo/images/donate.png" alt="Donate with PayPal" /></a>
+						</p>
+					</div>
+				</div>
+				<h1 class="tx_30 mt20 pb20 tx_osw" data-lang="la_172">Our Book</h1>
+				<div class="mt20 clear" style="position:relative;">
+					<div class="left mr20" style="width:120px">
+						<img src="./demo/images/book.jpg" style="max-width:100%; vertical-align:top" />
+					</div>
+					<div style="overflow:hidden">
+						<h2 class="tx_20 tx_osw"><i data-lang="la_173">"Adaptive Web Design: Crafting Rich Experiences with Progressive Enhancement" (Chinese Version)</i></h2>
+						<p class="tx_16 mt10 tx_osw"><i data-lang="la_174">Author: Aaron Gustafson; Translator: Benny C., Elsa R.</i></p>
+						<p class="mt20" style="position:absolute; bottom:0">
+							<a href="https://item.jd.com/12140642.html" target="_blank" class="btn_jd" data-lang="la_178">Buy from JD.com</a><a href="https://www.amazon.cn/dp/B06XD35132/ref=sr_1_1" target="_blank" class="btn_amazon ml10" data-lang="la_177">Buy from Amazon</a>
+						</p>
+					</div>
+				</div>
+				<blockquote class="mt20" style="clear:both;" data-lang="la_175">Building an elegant, functional website requires more than just knowing how to code. In Adaptive Web Design, Second Edition, you’ll learn how to use progressive enhancement to build websites that work anywhere, won’t break, are accessible by anyone—on any device—and are designed to work well into the future. — Amazon</blockquote>
+				<blockquote data-lang="la_176">I remember well when I got my hands on a copy of the first edition of Adaptive Web Design. I knew it would be good, but I didn’t expect to be quite so blown away after just one chapter. In that first chapter, Aaron managed to perfectly crystallize what I had been struggling to articulate for years on the true meaning of progressive enhancement. — Jeremy Keith</blockquote>
+				<div class="mt20 clear" style="position:relative">
+					<div class="left mr20" style="width:330px">
+						<h1 class="tx_30 pb20 mt20 tx_osw">Author</h1>
+						<div class="LI-profile-badge mt20"  data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="bennychak"><a class="LI-simple-link" href='https://cn.linkedin.com/in/bennychak?trk=profile-badge'>Author</a></div>
+					</div>
+					<div style="overflow:hidden">
+						<h1 class="tx_30 pb20 mt20 tx_osw">UFO Animate</h1>
+						<blockquote class="tx_14 mt20" data-lang="la_166">UFO Animate is a CSS animation system that can quickly build CSS animation effects visually. Not only is it a tool, the designer wants to make it fun. This system has been optimized for accessibility. English and Chinese language are supported.</blockquote>
+						<h2 class="tx_24 mt20 tx_osw" data-lang="la_167">Log:</h2>
+						<dl class="tx_14 mt10">
+							<dt data-lang="la_168">May 28 - 30, 2018:</dt>
+							<dd data-lang="la_169">Localization work in both English and Chinese.</dd>
+						</dl>
+						<h2 class="tx_24 mt20 tx_osw" data-lang="la_170">Copyright notice:</h2>
+						<p class="tx_14 mt20">UFOs pictures from <a href="www.shutterstock.com">www.shutterstock.com</a>, "ufo stickers" by <a href="https://www.shutterstock.com/g/notkoo2008">notkoo</a>, Royalty-free stock vector ID: 109927652.</p>
+						<h2 class="tx_24 mt20 tx_osw" data-lang="la_171">License:</h2>
+						<p class="tx_14 mt10">UFO Animate is &copy;2021 under the terms of the <a href="https://opensource.org/licenses/Apache-2.0">Apache 2.0 License</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
+<div class="copyright mt20">
+	<div class="bd" style="display:none">
+		<p>All above are <a href="http://creativecommons.org/licenses/by/3.0">Creative Commons friendly</a>.</p>
+	</div>
+</div>
+<div class="noimg">
+	<img id="noBodyimg" onload="loadNoBody(this)" src="" />
+	<img id="noStageimg" onload="loadNoStage(this)" src="" />
+</div>
+<!--[if lte IE 9]>
+<div class="iealert"><div class="inner">请升级您的浏览器，至少升到IE10差不多就能用了</div></div>
+<style>
+.topnav,.topnav_ph,.container,#qLtempOverlay{ display:none}
+</style>
+<![endif]-->
+
+<style id="customStyle"></style>
+<style id="styleTL"></style>
+<script src="./demo/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script src="./demo/mod_imagebase64.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-json@2.5.1/dist/jquery.json.min.js"></script>
+<script src="./demo/script.min.js"></script>
+
+<div id="cnzz" style="height:0; overflow:hidden">
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1275874278'%3E%3C/span%3E%3Cscript src='https://s5.cnzz.com/z_stat.php%3Fid%3D1275874278' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>
