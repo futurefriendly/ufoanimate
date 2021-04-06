@@ -128,12 +128,13 @@ body .pl0{ padding-left:0!important}
 ----------------------------------------------------------------*/
 
 /* 字体 */
-.tx_song{font-family:SimSun,Helvetica}
-.tx_yh{font-family:Helvetica,Microsoft Yahei,sans-serif}
+.tx_song{font-family:SimSun,Helvetica Neue}
+.tx_yh{font-family:Helvetica Neue,Microsoft Yahei,sans-serif}
+.tx_zh{font-family:Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif}
 .tx_ar{ font-family:Arial}
 .tx_ss{ font-family:sans-serif}
 .tx_code{ font-family:Courier New}
-.tx_osw{ font-family:oswald,Helvetica,Microsoft Yahei,sans-serif}
+.tx_osw{ font-family:oswald,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif}
 
 @font-face {
     font-family: 'oswald';
@@ -264,8 +265,8 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 .tb_form table{ width:100%;}
 .tb_form th,
 .tb_form td{ padding:3px 0; vertical-align:middle;}
-.tb_form th{ width:130px; padding-top:6px; font-size:16px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif; vertical-align:top;}
-.tb_form td{ font-size:14px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif}
+.tb_form th{ width:130px; padding-top:6px; font-size:16px; font-family:oswald,Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif; vertical-align:top;}
+.tb_form td{ font-size:14px; font-family:oswald,Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif}
 
 /* 文本框和文本域
 ----------------------------------------------------------------*/
@@ -274,7 +275,7 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 
 .inputTxt input,
 .inputTxt textarea,
-.inputTxt select{ width:100%; height:34px; padding:5px 10px; color:#999; border:#333 1px solid; background:#333; font:16px/1.5 Helvetica,Arial,Microsoft Yahei,sans-serif; border-radius:3px; vertical-align:middle;
+.inputTxt select{ width:100%; height:34px; padding:5px 10px; color:#999; border:#333 1px solid; background:#333; font:16px/1.5 Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif; border-radius:3px; vertical-align:middle;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-o-box-sizing:border-box;
@@ -394,7 +395,7 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 .btn{ display:block;}
 .btn a,
 .btn input,
-.btn button{ display:block; width:100%; padding-left:15px; padding-right:15px; border:none; border-radius:3px; line-height:1.5em; text-align:center; cursor:pointer; font-family:Microsoft Yahei,Simsun,sans-serif;
+.btn button{ display:block; width:100%; padding-left:15px; padding-right:15px; border:none; border-radius:3px; line-height:1.5em; text-align:center; cursor:pointer; font-family:Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-ms-box-sizing:border-box;
@@ -459,7 +460,7 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 .e_btn_s a:hover,
 .e_btn_s a:active,
 .e_btn_s input,
-.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:Helvetica,Arial,Microsoft Yahei,sans-serif}
+.e_btn_s button{ padding-top:6px; padding-bottom:6px; font-size:12px; font-family:Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif}
 
 .btn input[disabled="disabled"],
 .btn button[disabled="disabled"]{ background:#3a4148; border:#3a4148 1px solid; cursor:not-allowed;}
@@ -519,7 +520,7 @@ blockquote{ font-style:italic; border-left:#333 10px solid; padding-left:20px; m
 /* 提示
 ----------------------------------------------------------------*/
 
-.noticebar .bd{ position:relative; background:#111; border-radius:3px; font-family:oswald,Helvetica,Arial,Microsoft Yahei,sans-serif;}
+.noticebar .bd{ position:relative; background:#111; border-radius:3px; font-family:oswald,Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,Source Han Sans SC,sans-serif;}
 .noticebar a{ color:#fff}
 
 
