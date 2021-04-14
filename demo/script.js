@@ -196,7 +196,7 @@ function switchlang(bl){
 		la_180 : ['“资本不仅是财富，而是让梦想成真的力量。”','“The value of capital is to create, not just wealth.”'],
 		la_181 : ['摩根士丹利曾经拍摄过一个广告短片，名叫','One of our favorite videos is Morgan Stanley’s'],
 		la_182 : ['如果你也相信梦想总有一天将会成真，请点击下面的按钮赞助本网站，谢谢！','If you also believe that every dream will come true, don’t hesitate to donate this site. Thank you!'],
-		la_183 : ['2021年4月24日：','Apr 24, 2021:'],
+		la_183 : ['2021年4月14日：','Apr 24, 2021:'],
 		la_184 : ['更新animate.css至版本4.1.1。','Update animate.css to 4.1.1.'],
 		la_185 : ['垂直抖动','shakeY'],
 		la_186 : ['轻抖','headShake'],
