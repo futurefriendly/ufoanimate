@@ -25,7 +25,7 @@ function switchlang(bl){
 		la_9 : ['果冻','jello'],
 		la_10 : ['脉冲','pulse'],
 		la_11 : ['橡皮','rubberBand'],
-		la_12 : ['抖动','shake'],
+		la_12 : ['水平抖动','shakeX'],
 		la_13 : ['钟摆','swing'],
 		la_14 : ['秋千','tada'],
 		la_15 : ['摇晃','wobble'],
@@ -68,8 +68,8 @@ function switchlang(bl){
 		la_52 : ['X轴翻转退出','flipOutX'],
 		la_53 : ['Y轴翻转退出','flipOutY'],
 		la_54 : ['惯性','Lightspeed'],
-		la_55 : ['惯性进入','lightSpeedIn'],
-		la_56 : ['惯性退出','lightSpeedOut'],
+		la_55 : ['向左惯性进入','lightSpeedInRight'],
+		la_56 : ['向右惯性退出','lightSpeedOutRight'],
 		la_57 : ['旋转进入','Rotating Entrances'],
 		la_58 : ['旋转向内进入','rotateIn'],
 		la_59 : ['左上方旋转进入','rotateInDownLeft'],
@@ -197,7 +197,21 @@ function switchlang(bl){
 		la_181 : ['摩根士丹利曾经拍摄过一个广告短片，名叫','One of our favorite videos is Morgan Stanley’s'],
 		la_182 : ['如果你也相信梦想总有一天将会成真，请点击下面的按钮赞助本网站，谢谢！','If you also believe that every dream will come true, don’t hesitate to donate this site. Thank you!'],
 		la_183 : ['2021年4月24日：','Apr 24, 2021:'],
-		la_184 : ['更新animate.css至版本4.1.1。','Update animate.css to 4.1.1.']
+		la_184 : ['更新animate.css至版本4.1.1。','Update animate.css to 4.1.1.'],
+		la_185 : ['垂直抖动','shakeY'],
+		la_186 : ['轻抖','headShake'],
+		la_187 : ['心跳','heartBeat'],
+		la_188 : ['向右下淡入','fadeInTopLeft'],
+		la_189 : ['向左下淡入','fadeInTopRight'],
+		la_190 : ['向右上淡入','fadeInBottomLeft'],
+		la_191 : ['向左上淡入','fadeInBottomRight'],
+		la_192 : ['向左上淡出','fadeOutTopLeft'],
+		la_193 : ['向右上淡出','fadeOutTopRight'],
+		la_194 : ['向左下淡出','fadeOutBottomLeft'],
+		la_195 : ['向右下淡出','fadeOutBottomRight'],
+		la_196 : ['向右惯性进入','lightSpeedInLeft'],
+		la_197 : ['向左惯性退出','lightSpeedOutLeft'],
+		la_198 : ['玩偶匣子','JackInTheBox']
 	};
 	var thislang = '';
          
