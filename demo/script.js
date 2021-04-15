@@ -923,7 +923,7 @@ $(function(){
 			$('#aniCate1 .item').removeClass('select');
 			$(this).parent('.item').addClass('select');
 			$('#animation').attr('class','animate__animated animate__' + $(this).attr('title'));
-			$('#animatecssMet').text($(this).attr('title'));
+			$('#animatecssMet').text('animate__' + $(this).attr('title'));
 			setTimeout(function(){
 				$('#animation').attr('class','animate__animated');
 			},1000);
